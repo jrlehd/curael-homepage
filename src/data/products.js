@@ -1,0 +1,94 @@
+// src/data/products.js
+
+export const products = [
+  {
+    slug: "12025061911331",
+    name: "내몸에 베지셀 메이킹 7.4",
+    category: "VEGICEL",
+    image: ["/images/product1-1.png", "/images/product1-1(1).png"],
+    volume: "180ml, 1팩",
+    ingredients: "사과, 당근, 토마토, 레드비트, 양배추, 브로콜리, 파프리카, 정제수",
+    usage: "1회 1팩 섭취",
+    expiration: "상품 외부 표기 / 제조일로부터 30일 이내 생산",
+    storage: "서늘한 곳에 보관, 개봉 후 냉장 보관 권장",
+    link: "https://mkt.shopping.naver.com/link/683fa66c8569a81f0d6d8137"
+  },
+  {
+    slug: "22025061911332",
+    name: "베리베라진",
+    category: "자연하",
+    image: ["/images/product2-3.png", "/images/product2-3.jpg"],
+    volume: "20ml x 30포 (600ml)",
+    ingredients: "구기자, 황기, 오미자, 산수유, 섭리풀",
+    usage: "1일 1회, 1포 섭취",
+    expiration: "상품 외부 표기 / 제조일로부터 24개월까지",
+    storage: "직사광선을 피해 서늘한 곳에 보관",
+    link: "https://mkt.shopping.naver.com/link/683fa4e0e625370ec15b2410"
+  },
+  {
+    slug: "22025061911333",
+    name: "커큐진",
+    category: "자연하",
+    image: ["/images/product2-2.png", "/images/product2-2.jpg"],
+    volume: "2g x 30포 (60g)",
+    ingredients: "울금, 강황, 흑후추추출물, 프로폴리스추출물, 비타민B1, 아연, 셀렌, 비타민C, 홍삼농축액, 프락토올리고당",
+    usage: "1일 1포 섭취",
+    expiration: "제조일로부터 24개월까지",
+    storage: "직사광선을 피해 서늘한 곳에 보관",
+    link: "https://mkt.shopping.naver.com/link/683fa4e0d20fbf73c9d5bf43"
+  },
+  {
+    slug: "22025061911334",
+    name: "그린진",
+    category: "자연하",
+    image: ["/images/product2-1.png", "/images/product2-1.jpg"],
+    volume: "1.5g x 30포 (45g)",
+    ingredients: "브로콜리, 양배추, 케일, 당근, 보리새싹",
+    usage: "150~200ml 물 또는 음료에 1포를 타서 섭취",
+    expiration: "제조일로부터 24개월까지",
+    storage: "직사광선을 피해 서늘한 곳에 보관",
+    link: "https://mkt.shopping.naver.com/link/683fa4e0d20fbf73c9d5bf44"
+  },
+  {
+    slug: "32025061911331",
+    name: "캔서 위너",
+    category: "서적",
+    image: "/images/product3-1.jpg",
+    author: "김훈하, 전경미",
+    publisher: "큐라엘출판",
+    description: "암을 이기는 환자의 삶을 위한 안내서. 암세포가 싹트지 않게 하려면 어떻게 관리해야 할지, 회복과 생존을 위한 다양한 통합전략과 환자 사례를 함께 소개합니다.",
+    link: "https://product.kyobobook.co.kr/detail/S000213728553"
+  },
+  {
+    slug: "32025061911332",
+    name: "기적의 항암식단",
+    category: "서적",
+    image: "/images/product3-2.jpg",
+    author: "김훈하, 김정은",
+    publisher: "경향BP",
+    description: "암 치료 후에도 먹는 것이 중요한 환자들을 위한 식단 레시피북. 쉽게 구할 수 있는 재료로 빠르게 조리할 수 있는 항암 밥상과 레시피 119가지를 수록했습니다.",
+    link: "https://product.kyobobook.co.kr/detail/S000214347306"
+  },
+  {
+    slug: "32025061911333",
+    name: "열방약국 말기암 통합요법 상담소",
+    category: "서적",
+    image: "/images/product3-4.jpg",
+    author: "김훈하",
+    publisher: "리더북스",
+    description: "말기암, 전이암 환자에게 희망을 전하는 통합요법 가이드. 줄기세포의 활성과 억제, 면역조절, 생활습관, 식이요법과 보충제의 조합까지 한 권에 담았습니다.",
+    link: "https://product.kyobobook.co.kr/detail/S000200687516"
+  },
+  {
+    slug: "32025061911334",
+    name: "열방약국 유방암 상담소",
+    category: "서적",
+    image: "/images/product3-3.jpg",
+    author: "김훈하",
+    publisher: "리더북스",
+    description: "유방암 환자에게 꼭 필요한 항암 치료 후 관리법, 보충제 선택법, 부작용 대응, 운동법까지. 유방암 환자가 가장 궁금해하는 질문에 과학적이고 통합적인 해답을 제시합니다.",
+    link: "https://product.kyobobook.co.kr/detail/S000001942141"
+  }
+];
+
+export default products;

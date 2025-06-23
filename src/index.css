@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('./assets/fonts/NotoSansKR-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR ExtraBold';
+  src: url('/fonts/NotoSansKR-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@keyframes zoomOutSlow {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom-out-slow {
+  animation: zoomOutSlow 15s ease-in-out infinite;
+}
+
+.fade-slide {
+  animation: fadeInOut 10s ease-in-out infinite;
+  transition: opacity 1s ease-in-out;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+.fp-watermark {
+  background-color: #0f172a !important; /* 풋터 배경과 동일한 색 */
+  color: #0f172a !important;           /* 텍스트도 같은 색으로 */
+  position: fixed !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1 !important;
+}
+.fp-watermark a {
+  color: #0f172a !important;
+  text-decoration: none !important;
+}
+
+.section.h-fit {
+  height: auto !important;
+}
+
+.brand-gradient {
+  background: linear-gradient(to right, #ffedd5, #fed7aa);
+}
+
+.jayeonha-gradient {
+  background: linear-gradient(to right, #d1fae5, #bbf7d0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fp-watermark {
+  display: none !important;
+}
