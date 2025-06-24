@@ -18,7 +18,7 @@ export default function Jayeonha() {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">자연하 브랜드 스토리</h1>
-            <p className="text-lg md:text-xl">전통과 발효로 완성한 자연 기반 건강</p>
+            <p className="text-lg md:text-xl">첨가물은 비우고, 천연 파이토케미컬로 항암 부작용을 다독이는 자연하</p>
           </div>
         </div>
       </div>
@@ -32,22 +32,25 @@ export default function Jayeonha() {
             className="w-full max-w-[500px] rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">일상의 자연을 담다</h2>
+            <h2 className="text-3xl font-bold mb-4">환자 경험에서 출발한 천연 조합, 자연하</h2>
             <p className="text-gray-700 leading-relaxed">
-              자연하는 바쁜 현대인도 간편하게 섭취할 수 있는 자연 유래 원료 기반 건강보조 제품 브랜드입니다.
-채소, 과일, 약초 등 자연에서 온 재료를 바탕으로 분말과 액상 포장 형태로 설계되어,
-소비자의 몸에 덜 부담되고, 흡수가 용이하며, 일상 루틴 속에서 자연스럽게 스며들 수 있도록 기획되었습니다.
+              자연하는 김훈하 약사가 20년간 천연물 연구를 이어오며,
+              2,000명 이상의 암 환자 상담에서 얻은 실제 회복 데이터를 토대로 탄생한
+              클린라벨 건강기능식품 브랜드입니다.
+              항암 과정에서 체력, 면역, 조혈 회복이 중요하다는 현장의 목소리를
+              식물성 유효 성분과 맞춤 배합으로 구현했습니다.
             </p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4">흡수와 기능을 모두 고려한 자연 포뮬러</h2>
+            <h2 className="text-3xl font-bold mb-4">첨가물 0%, 자연 유래 성분 100%</h2>
             <p className="text-gray-700 leading-relaxed">
-              자연하는 원료 본연의 기능과 흡수율을 고려해 설계된 건강 포뮬러를 지향합니다.
-강황과 큐민, 녹색 채소, 항산화 성분 등 각 제품별 주요 소재를 과학적으로 조합하여,
-불필요한 첨가물을 줄이고 자연 그대로의 건강 효과를 담았습니다.
+              자연하는 모든 제품에 합성 부형제, 감미료, 착색료를 넣지 않습니다.
+              몸이 민감한 암 환자도 안심하고 섭취할 수 있도록
+              파이토케미컬과 단백질, 미네랄 등을 자연 유래 소재로만 채워 만듭니다.
+              깨끗한 제조 철학은 자연하의 모든 제품에 일관되게 적용됩니다.
             </p>
           </div>
           <img
@@ -64,11 +67,13 @@ export default function Jayeonha() {
             className="w-full max-w-[500px] rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">언제 어디서나, 일상 속 작은 건강 루틴</h2>
+            <h2 className="text-3xl font-bold mb-4">회복을 위한 복합 설계, 부작용을 덜고 일상을 채우다</h2>
             <p className="text-gray-700 leading-relaxed">
-              자연하의 제품은 모두 포 형태나 스틱 타입으로 제작되어,
-아침 식사 전이나 운동 전후, 피로할 때 언제든지 간편하게 섭취할 수 있습니다.
-물 없이도 즐길 수 있어 바쁜 일상 속에서도 작은 건강 습관으로 자리잡을 수 있습니다.
+              자항암 치료 중 흔한 피로, 식욕 저하, 빈혈, 면역 저하 등은 일상을 크게 흔듭니다.
+              자연하의 베리베라진, 커큐진, 그린진은 항산화, 조혈, 소화·면역 지원을 목표로 설계되었습니다.
+              실제 환자들은 항암과 병행하며 체력 회복과 활력 상승을 체감하고 있습니다.
+              첨가물 없이 자연 유래 성분으로만 구성되어, 민감한 몸에도 안심할 수 있습니다.
+              부작용은 덜고, 회복은 채우는 일상용 솔루션—그것이 자연하입니다.
             </p>
           </div>
         </div>

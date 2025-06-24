@@ -18,7 +18,7 @@ export default function VegicelPage() {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">VEGICEL 브랜드 스토리</h1>
-            <p className="text-lg md:text-xl">채소와 과일로 설계한 건강의 시작</p>
+            <p className="text-lg md:text-xl">김훈하 약사가 7년간 몸으로 증명한 항암 레시피, 베지셀로 항산화를 더하세요</p>
           </div>
         </div>
       </div>
@@ -32,23 +32,24 @@ export default function VegicelPage() {
             className="w-full max-w-[500px] rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">채소와 과일로 설계한 건강의 시작</h2>
+            <h2 className="text-3xl font-bold mb-4">진짜 경험에서 태어난 브랜드, 베지셀</h2>
             <p className="text-gray-700 leading-relaxed">
-              베지셀은 채소와 과일을 기반으로 설계된 식물성 건강 주스 브랜드입니다.
-비건 포뮬러와 저칼로리 구성을 바탕으로 누구나 부담 없이 섭취할 수 있도록 기획되었으며,
-일상 속에서 자연스럽게 실천할 수 있는 건강 루틴을 제안합니다.
+              베지셀은 약사이자 항암 치료 경험자인 김훈하 대표가
+              직접 7년 넘게 섭취해온 야채 조합에서 출발한 브랜드입니다.
+              개인의 회복 경험을 바탕으로, 실제 환자 2,000명 이상의 상담을 통해 검증된 건강 솔루션은
+              이제 수십만 명이 선택하는 실천 가능한 항암 레시피가 되었습니다.
             </p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4">항산화와 pH 밸런스를 고려한 포뮬러</h2>
+            <h2 className="text-3xl font-bold mb-4">첨가물 없이, 자연 그대로, 베지셀의 원칙</h2>
             <p className="text-gray-700 leading-relaxed">
-              베지셀은 항산화 성분과 pH 밸런스를 고려한 원료 조합으로 구성됩니다.
-신선한 채소와 과일을 원물 그대로 담아내어, 영양과 맛을 함께 만족시킬 수 있도록 설계되었습니다.
-
-
+              베지셀은 설탕·색소·보존료를 배제하고
+              자연에서 얻은 재료만으로 정직하게 만듭니다.
+              가정에서 직접 쪄쪄서 마시던 방식 그대로, 저온 착즙과 고압살균(HPP)을 적용해
+              영양과 신선함, 안전성을 모두 지켜낸 무첨가 헬스푸드 브랜드입니다.
             </p>
           </div>
           <img
@@ -65,10 +66,12 @@ export default function VegicelPage() {
             className="w-full max-w-[500px] rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">일상 속 건강 루틴으로</h2>
+            <h2 className="text-3xl font-bold mb-4">누구나 매일, 가족과 함께, 지속 가능한 건강 루틴</h2>
             <p className="text-gray-700 leading-relaxed">
-              간편하게 짜먹는 파우치 형태로, 아침 식사 대용이나 운동 전후, 바쁜 일상 속 간식으로 활용할 수 있습니다.
-가볍고 상큼한 맛과 편리한 포장으로 현대인을 위한 스마트한 건강 솔루션을 제공합니다.
+              베지셀은 특정 대상이 아닌, 아이부터 부모 세대까지
+              온 가족이 함께 마실 수 있도록 개발되었습니다.
+              ‘맛있게 마실 수 있어야 습관이 된다’는 원칙 아래,
+              클린 라벨과 항산화 데이터로 신뢰를 더하며 건강한 생활 습관의 출발점이 되고 있습니다.
             </p>
           </div>
         </div>

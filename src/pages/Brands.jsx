@@ -38,7 +38,7 @@ export default function Brands() {
             <div className="p-6 bg-white">
               <h2 className="text-xl font-bold text-gray-800 group-hover:text-green-600 transition">Vegicel</h2>
               <p className="text-sm text-gray-600 mt-2">
-                식물성 원료 기반의 저칼로리 포뮬러. 채소와 과일로 설계한 건강의 시작
+                김훈하 약사가 7년간 몸으로 증명한 항암 레시피, 베지셀로 항산화를 더하세요.
               </p>
             </div>
           </Link>
@@ -55,7 +55,7 @@ export default function Brands() {
             <div className="p-6 bg-white">
               <h2 className="text-xl font-bold text-gray-800 group-hover:text-green-600 transition">자연하</h2>
               <p className="text-sm text-gray-600 mt-2">
-                분말과 액상스틱으로 건강함을 전하는 기능성 포뮬러 브랜드
+                첨가물은 비우고, 천연 파이토케미컬로 항암 부작용을 다독이는 자연하
               </p>
             </div>
           </Link>

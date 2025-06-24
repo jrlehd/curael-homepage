@@ -39,11 +39,13 @@ export default function About() {
             className="w-full max-w-[500px] aspect-[4/3] object-cover rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">과학으로 증명하는 건강</h2>
+            <h2 className="text-3xl font-bold mb-4">자연과 사람을 연결하는 브랜드, 큐라엘</h2>
             <p className="text-gray-700 leading-relaxed">
-              큐라엘은 의약품 및 건강기능식품 연구에 과학적 근거를 기반으로 접근합니다.
-              최신 연구 장비와 정밀한 실험 설계를 통해, 제품의 안전성과 유효성을 입증합니다.
-              끊임없는 실험과 데이터 분석을 통해 고객에게 신뢰받는 건강 솔루션을 제공합니다.
+              (주)큐라엘은 천연물 기반 항암 건강기능식품과 맞춤형 통합케어 솔루션을 제공하는 헬스케어 기업입니다.
+              ‘베지셀’, ‘커큐진’, ‘베리베라진’ 등 자연에서 얻은 건강 소재를 과학적으로 설계하고,
+              1:1 상담과 식이·심리·생활 전반의 케어 서비스를 통해 암 환자의 삶의 질을 높이는 데 집중합니다.
+              건강식품부터 상담, 출판, 미디어까지 연결된 토털 서비스로
+              보다 현실적이고 따뜻한 암 케어의 기준을 만들어가고 있습니다.
             </p>
           </div>
         </div>
@@ -51,11 +53,14 @@ export default function About() {
         {/* 자연 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
           <div>
-            <h2 className="text-3xl font-bold mb-4">자연을 담은 큐라엘</h2>
+            <h2 className="text-3xl font-bold mb-4">자연에서 출발해, 삶에 스며드는 건강</h2>
             <p className="text-gray-700 leading-relaxed">
-              큐라엘의 제품은 자연 유래 원료에서 시작됩니다. 정직한 재배와 친환경적인 수확 방식을
-              통해 얻은 원료는 최소한의 가공을 거쳐 제품에 담깁니다.
-              우리는 자연과의 조화 속에서 진정한 건강을 추구합니다.
+              큐라엘은 자연에 내재된 치유의 가능성을 믿습니다.
+              하지만 단순한 '천연'을 넘어, 근거 있는 조합과 정직한 제조 과정을 통해
+              몸에 부담 없는 건강 솔루션을 만드는 것이 우리의 철학입니다.
+              정제되지 않은 자연, 필요 이상 가공하지 않은 원료,
+              그리고 환자를 위한 고민이 담긴 배합—이 모든 것이
+              삶에 스며드는 진정한 건강을 완성합니다.
             </p>
           </div>
           <img
@@ -73,12 +78,12 @@ export default function About() {
             className="w-full max-w-[500px] aspect-[4/3] object-cover rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">CURAEL의 비전</h2>
+            <h2 className="text-3xl font-bold mb-4">천연물과 파이토케미컬 기반의 혁신,<br /> 암 치료의 새로운 기준을 세웁니다</h2>
             <p className="text-gray-700 leading-relaxed">
-              큐라엘은 자연과 과학, 사람을 연결하는 건강한 미래를 지향합니다. 
-              우리는 생명 존중의 가치를 바탕으로 건강기능식품의 새로운 기준을 제시하며 
-              모두의 삶에 긍정적인 변화를 만들고자 합니다. 빛나는 아이디어와 자연의 생명력을 통해 
-              더 밝은 내일을 만들어 갑니다.
+              큐라엘은 자연에서 유래한 식물성 유효 성분을 과학적 근거에 기반해 정교하게 조합함으로써,
+              암의 예방부터 치료, 회복에 이르기까지 전 과정을 통합 지원하는 글로벌 항암 헬스케어 기업을 지향합니다.
+              우리는 자연과 과학, 그리고 환자 중심의 케어를 연결해
+              암 치료의 패러다임을 보다 지속 가능하고 통합적인 방향으로 전환해 나가고자 합니다.
             </p>
           </div>
         </div>

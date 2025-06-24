@@ -3,20 +3,20 @@ import { useEffect, useState, useRef } from "react";
 const slides = [
   {
     image: "/images/slide1.png",
-    title: "CURAEL'S ORIGIN",
-    description: "우리는 자연에서 출발합니다.",
+    title: "STEP TOWARD HEALING",
+    description: "치유의 지름길은 변화를 향한 첫걸음입니다.",
     link: "/about",
   },
   {
     image: "/images/slide2.png",
-    title: "FINDING ANSWERS IN NATURE",
-    description: "식물의 생명력을 건강에 담다.",
+    title: "NATURE’S BLUEPRINT",
+    description: "자연의 원형으로 몸과 삶을 다시 설계합니다.",
     link: "/about",
   },
   {
     image: "/images/slide3.png",
-    title: "A HEALTHY FUTURE FOR ALL",
-    description: "지속가능한 R&D로 내일을 만듭니다.",
+    title: "RELENTLESS CHANGE",
+    description: "포기하지 않는 변화, 암도 이겨낼 수 있습니다.",
     link: "/about",
   },
 ];
