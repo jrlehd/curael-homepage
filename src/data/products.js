@@ -7,7 +7,7 @@ export const products = [
     category: "VEGICEL",
     image: ["/images/product1-1.png", "/images/product1-1(1).png"],
     volume: "180ml, 1팩",
-    ingredients: "사과, 당근, 토마토, 레드비트, 양배추, 브로콜리, 파프리카, 정제수",
+    ingredients: "사과 (국산), 당근 (국산), 토마토 (국산), 레드비트 (국산), 양배추 (국산), 브로콜리 (국산), 파프리카 (국산), 정제수",
     usage: "1회 1팩 섭취",
     expiration: "상품 외부 표기 / 제조일로부터 30일 이내 생산",
     storage: "서늘한 곳에 보관, 개봉 후 냉장 보관 권장",
@@ -19,7 +19,7 @@ export const products = [
     category: "자연하",
     image: ["/images/product2-3.png", "/images/product2-3.jpg"],
     volume: "20ml x 30포 (600ml)",
-    ingredients: "구기자, 황기, 오미자, 산수유, 섭리풀",
+    ingredients: "아로니아(폴란드), 구기자(국산), 알로에베라겔동결건조분말(100:1)[알로에베라겔건조분말(200:1), 말토덱스트린], 헛개나무열매(국산), 쇠비름(국산), 정제수",
     usage: "1일 1회, 1포 섭취",
     expiration: "상품 외부 표기 / 제조일로부터 24개월까지",
     storage: "직사광선을 피해 서늘한 곳에 보관",
@@ -31,7 +31,7 @@ export const products = [
     category: "자연하",
     image: ["/images/product2-2.png", "/images/product2-2.jpg"],
     volume: "2g x 30포 (60g)",
-    ingredients: "울금, 강황, 흑후추추출물, 프로폴리스추출물, 비타민B1, 아연, 셀렌, 비타민C, 홍삼농축액, 프락토올리고당",
+    ingredients: "강황가루(인도산), 강황가루(중국산), 건조맥주효모(리투아니아), 프락토올리고당, 치커리식이섬유, 후추추출물, 호장근추출물, 녹차추출물, 회화나무열매추출물",
     usage: "1일 1포 섭취",
     expiration: "제조일로부터 24개월까지",
     storage: "직사광선을 피해 서늘한 곳에 보관",
@@ -43,7 +43,7 @@ export const products = [
     category: "자연하",
     image: ["/images/product2-1.png", "/images/product2-1.jpg"],
     volume: "1.5g x 30포 (45g)",
-    ingredients: "브로콜리, 양배추, 케일, 당근, 보리새싹",
+    ingredients: "브로콜리(국산), 양배추(국산), 케일(국산), 당근(국산), 보리새싹(국산)",
     usage: "150~200ml 물 또는 음료에 1포를 타서 섭취",
     expiration: "제조일로부터 24개월까지",
     storage: "직사광선을 피해 서늘한 곳에 보관",
@@ -56,7 +56,7 @@ export const products = [
     image: "/images/product3-1.jpg",
     author: "김훈하, 전경미",
     publisher: "큐라엘출판",
-    description: "암을 이기는 환자의 삶을 위한 안내서. 암세포가 싹트지 않게 하려면 어떻게 관리해야 할지, 회복과 생존을 위한 다양한 통합전략과 환자 사례를 함께 소개합니다.",
+    description: "‘캔서위너’는 재발·전이암 환자에게 희망을 전하는 책으로, 암을 극복한 김훈하 약사의 천연물·식이요법 경험이 담겨 있습니다. 병원 치료만으로는 부족한 암 관리의 해답을 환자 스스로 찾을 수 있도록 안내합니다.",
     link: "https://product.kyobobook.co.kr/detail/S000213728553"
   },
   {
@@ -66,7 +66,7 @@ export const products = [
     image: "/images/product3-2.jpg",
     author: "김훈하, 김정은",
     publisher: "경향BP",
-    description: "암 치료 후에도 먹는 것이 중요한 환자들을 위한 식단 레시피북. 쉽게 구할 수 있는 재료로 빠르게 조리할 수 있는 항암 밥상과 레시피 119가지를 수록했습니다.",
+    description: "항암 치료 전후 단계별로 필요한 식단을 담은 레시피북. 금지 식품 없이도 맛있고 간편하게 조리할 수 있는 항암 레시피 119가지를 소개합니다.",
     link: "https://product.kyobobook.co.kr/detail/S000214347306"
   },
   {
@@ -76,7 +76,7 @@ export const products = [
     image: "/images/product3-4.jpg",
     author: "김훈하",
     publisher: "리더북스",
-    description: "말기암, 전이암 환자에게 희망을 전하는 통합요법 가이드. 줄기세포의 활성과 억제, 면역조절, 생활습관, 식이요법과 보충제의 조합까지 한 권에 담았습니다.",
+    description: "말기암, 전이암 환자에게 희망을 전하는 통합요법 가이드. 암 줄기세포의 활성과 억제, 면역조절, 생활습관, 식이요법과 보충제의 조합까지 한 권에 담았습니다.",
     link: "https://product.kyobobook.co.kr/detail/S000200687516"
   },
   {

@@ -48,7 +48,7 @@ export default function ConsultPage() {
               <h2 className="text-3xl font-bold mb-4">사전 준비는 필수</h2>
               <p className="text-gray-700 leading-relaxed">
                 상담은 오직 카카오 채널을 통해 신청 가능하며, 사전 문답지와 건강 자료의 제출이 필수입니다.
-                최소 2주 이상의 대기 기간이 있을 수 있으며, 예약 시 충분한 준비 기간이 필요합니다.
+                최소 2주 이상의 대기 기간이 있을 수 있으며, 예약 시 충분한 자료준비가 필요합니다.
               </p>
             </div>
             <img
@@ -67,8 +67,9 @@ export default function ConsultPage() {
             <div>
               <h2 className="text-3xl font-bold mb-4">전문가가 함께하는 치유 전략</h2>
               <p className="text-gray-700 leading-relaxed">
-                상담 약사인 김훈하, 전정미 약사는 각각 요일별로 전문적인 통합 암치료 상담을 진행하며,
-                일정 및 대상 조건에 따라 상담 여부가 결정됩니다.
+                상담 약사인 김훈하, 전정미 약사는 각각 요일별로 전문적인 통합 암치료 상담을 진행하며, 일정 및 대상 조건에 따라 상담 여부가 결정됩니다.
+                상담은 환자의 혈액검사, 식이습관, 생활습관 등 전반적인 생활 교정은 물론, 기존 처방전과의 상호작용까지 고려하여 보충제를 제안하고,
+                항암 부작용을 최소화하며 암 세포를 효과적으로 사멸시키기 위한 통합 치유 전략을 제시합니다.
               </p>
             </div>
           </div>

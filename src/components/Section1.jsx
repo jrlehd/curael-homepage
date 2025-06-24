@@ -15,7 +15,7 @@ const slides = [
   },
   {
     image: "/images/slide3.png",
-    title: "RELENTLESS CHANGE",
+    title: "NEVER-ENDING CHANGE",
     description: "포기하지 않는 변화, 암도 이겨낼 수 있습니다.",
     link: "/about",
   },

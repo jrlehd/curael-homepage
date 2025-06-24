@@ -18,7 +18,7 @@ export default function VegicelPage() {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">VEGICEL 브랜드 스토리</h1>
-            <p className="text-lg md:text-xl">김훈하 약사가 7년간 몸으로 증명한 항암 레시피, 베지셀로 항산화를 더하세요</p>
+            <p className="text-lg md:text-xl">김훈하 약사가 7년간 직접 체험한 항암 레시피, 베지셀로 항산화를 더하세요</p>
           </div>
         </div>
       </div>
@@ -46,9 +46,9 @@ export default function VegicelPage() {
           <div>
             <h2 className="text-3xl font-bold mb-4">첨가물 없이, 자연 그대로, 베지셀의 원칙</h2>
             <p className="text-gray-700 leading-relaxed">
-              베지셀은 설탕·색소·보존료를 배제하고
-              자연에서 얻은 재료만으로 정직하게 만듭니다.
-              가정에서 직접 쪄쪄서 마시던 방식 그대로, 저온 착즙과 고압살균(HPP)을 적용해
+              베지셀은 인공감미료·색소·보존료를 배제하고,
+              자연에서 얻은 재료를 원물 그대로 정직하게 사용합니다.
+              가정에서 직접 쪄서 마시던 방식 그대로, 고압살균(HPP)을 적용해
               영양과 신선함, 안전성을 모두 지켜낸 무첨가 헬스푸드 브랜드입니다.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function VegicelPage() {
               베지셀은 특정 대상이 아닌, 아이부터 부모 세대까지
               온 가족이 함께 마실 수 있도록 개발되었습니다.
               ‘맛있게 마실 수 있어야 습관이 된다’는 원칙 아래,
-              클린 라벨과 항산화 데이터로 신뢰를 더하며 건강한 생활 습관의 출발점이 되고 있습니다.
+              항산화 데이터로 신뢰를 더하며 건강한 생활 습관의 출발점이 되고 있습니다.
             </p>
           </div>
         </div>

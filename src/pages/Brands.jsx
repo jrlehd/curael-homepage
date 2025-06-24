@@ -38,7 +38,7 @@ export default function Brands() {
             <div className="p-6 bg-white">
               <h2 className="text-xl font-bold text-gray-800 group-hover:text-green-600 transition">Vegicel</h2>
               <p className="text-sm text-gray-600 mt-2">
-                김훈하 약사가 7년간 몸으로 증명한 항암 레시피, 베지셀로 항산화를 더하세요.
+                김훈하 약사가 7년간 직접 체험한 항암 레시피, 베지셀로 항산화를 더하세요.
               </p>
             </div>
           </Link>
