@@ -71,3 +71,7 @@ html {
 .fp-watermark {
   display: none !important;
 }
+
+body {
+  @apply bg-[#F5FFFB]; /* 또는 원하는 색상 */
+}
