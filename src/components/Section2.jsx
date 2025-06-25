@@ -134,7 +134,7 @@ const Section2 = () => {
                 <img
                   src={selectedProduct.image}
                   alt={selectedProduct.name}
-                  className="w-full aspect-[3/4] object-cover rounded-xl mb-8"
+                  className="w-[200px] h-[260px] object-contain rounded-xl mb-8"
                 />
               </Link>
 

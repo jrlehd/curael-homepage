@@ -58,11 +58,15 @@ export default function Section3() {
               key={index}
               className="flex flex-col items-center hover:scale-105 transition-transform"
             >
-              <img
-                src={expert.image}
-                alt={expert.name}
-                className="w-32 h-32 rounded-full object-cover shadow-lg mb-3"
-              />
+              {/* 이미지 감싸는 박스 추가 */}
+              <div className="w-36 h-36 rounded-full overflow-hidden shadow-lg mb-3">
+                <img
+                  src={expert.image}
+                  alt={expert.name}
+                  className="w-full h-full object-cover scale-110 translate-y-1"
+                />
+              </div>
+              
               <span className="text-lg font-medium text-gray-700">
                 {expert.name}
               </span>
