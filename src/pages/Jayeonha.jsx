@@ -67,7 +67,7 @@ export default function Jayeonha() {
             className="w-full max-w-[500px] rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">회복을 위한 복합 설계, 부작용을 덜고 일상을 채우다</h2>
+            <h2 className="text-3xl font-bold mb-4">회복을 위한 설계, 일상을 채우다</h2>
             <p className="text-gray-700 leading-relaxed">
               항암 치료 중 흔한 피로, 식욕 저하, 빈혈, 면역 저하 등은 일상을 크게 흔듭니다.
               자연하의 베리베라진, 커큐진, 그린진은 항산화, 조혈, 소화·면역 지원을 목표로 설계되었습니다.

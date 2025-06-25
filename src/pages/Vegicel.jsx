@@ -66,7 +66,7 @@ export default function VegicelPage() {
             className="w-full max-w-[500px] rounded-xl shadow"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">누구나 매일, 가족과 함께, 지속 가능한 건강 루틴</h2>
+            <h2 className="text-3xl font-bold mb-4">누구나 매일, 지속 가능한 건강 루틴</h2>
             <p className="text-gray-700 leading-relaxed">
               베지셀은 특정 대상이 아닌, 아이부터 부모 세대까지
               온 가족이 함께 마실 수 있도록 개발되었습니다.
