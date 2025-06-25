@@ -49,7 +49,7 @@ export default function Section1() {
           href={slide.link}
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out transform ${
-            index === current ? "opacity-100 z-10 animate-zoom-out-slow" : "opacity-0 z-0"
+          index === current ? "opacity-100 z-10 animate-zoom-out-slow" : "opacity-0 z-0 scale-100"
           }`}
           style={{
             backgroundImage: `url(${slide.image})`,
