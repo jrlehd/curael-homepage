@@ -34,7 +34,7 @@ export default function Section1() {
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 9000);
+    }, 6000);
   };
 
   const handleDotClick = (index) => {
