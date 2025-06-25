@@ -116,10 +116,10 @@ export default function ConsultPage() {
             <div className="rounded-lg bg-white p-6 text-center shadow">
               <img src="/images/expert1.jpg" alt="김훈하 약사" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
               <h3 className="text-xl font-semibold">김훈하 약사</h3>
-              <p className="text-gray-500">동덕여자대학교 약학과 졸업업<br />
+              <p className="text-gray-500">동덕여자대학교 약학과 졸업<br />
                 열방약국 대표 약사<br />
                 現 열방상담소 근무<br />
-                現 열방상담소 근무現 CURAEL 대표<br /></p>
+                現 CURAEL 대표</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow">
               <img src="/images/expert2.jpg" alt="전정미 약사" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
