@@ -23,7 +23,7 @@ const GreetingPage = () => {
           {/* 이미지 (모바일에서 축소) */}
           <div className="w-full md:w-1/2">
             <img
-              src="/images/greeting.png"
+              src="/images/greeting.jpg"
               alt="대표 인사말"
               className="rounded-xl shadow-md w-full max-w-xs md:max-w-full h-auto object-cover mx-auto md:mx-0"
             />
