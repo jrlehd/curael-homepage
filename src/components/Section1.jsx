@@ -3,20 +3,14 @@ import { useEffect, useState, useRef } from "react";
 const slides = [
   {
     image: "/images/slide1.png",
-    title: "STEP TOWARD HEALING",
-    description: "치유의 지름길은 변화를 향한 첫걸음입니다.",
     link: "/about",
   },
   {
     image: "/images/slide2.png",
-    title: "NATURE’S BLUEPRINT",
-    description: "자연의 원형으로 몸과 삶을 다시 설계합니다.",
     link: "/about",
   },
   {
     image: "/images/slide3.png",
-    title: "NEVER-ENDING CHANGE",
-    description: "포기하지 않는 변화, 암도 이겨낼 수 있습니다.",
     link: "/about",
   },
 ];
@@ -34,7 +28,7 @@ export default function Section1() {
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 4000);
   };
 
   const handleDotClick = (index) => {
@@ -43,49 +37,67 @@ export default function Section1() {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden font-sans select-none">
+    <section className="relative h-screen overflow-hidden select-none">
+      {/* 이미지 슬라이드 */}
       {slides.map((slide, index) => (
         <a
           href={slide.link}
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out transform ${
-          index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
           style={{
             backgroundImage: `url(${slide.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            display: "block"
           }}
-        ></a>
+        >
+          <div className="absolute inset-0 bg-black opacity-40" />
+        </a>
       ))}
 
-      <div className="absolute z-20 top-1/2 left-[50%] transform -translate-y-1/2 text-white text-left max-w-xl">
-        <h2
-          className="text-6xl font-extrabold mb-6 leading-tight drop-shadow-xl tracking-tight"
-          style={{ fontFamily: "'Noto Sans KR ExtraBold'" }}
+      {/* 고정 텍스트 */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-20 px-4 text-white">
+        {/* ① CURAEL (작고 굵게) */}
+        <p
+          className="text-xs md:text-sm mb-3 tracking-widest"
+          style={{ fontFamily: "'Nanum Gothic'", fontWeight: 800 }}
         >
-          {slides[current].title}
+          CURAEL
+        </p>
+
+        {/* ② 대표 문구 (가장 크게, 일부 단어만 Extrabold) */}
+        <h2
+          className="text-3xl md:text-5xl leading-snug tracking-tight mb-5"
+          style={{ fontFamily: "'Nanum Gothic'", fontWeight: 400 }}
+        >
+          From <strong style={{ fontWeight: 800 }}>Nature</strong> To{" "}
+          <strong style={{ fontWeight: 800 }}>Cure</strong>
         </h2>
-        <p className="text-lg leading-relaxed drop-shadow-md max-w-lg">
-          {slides[current].description}
+
+        {/* ③ 설명 문구 (중간 크기, regular) */}
+        <p
+          className="text-sm md:text-3xl leading-relaxed max-w-xl opacity-90"
+          style={{ fontFamily: "'Nanum Gothic'", fontWeight: 500 }}
+        >
+          자연에서 답을 찾다
         </p>
       </div>
 
-      {/* ◉ 인디케이터 (텍스트 아래 고정 위치) */}
-      <div className="absolute left-[50%] bottom-[30%] flex items-center space-x-4 text-sm text-white z-30">
-        <span className="opacity-60 font-normal">{String(current + 1).padStart(2, "0")}</span>
-        <span className="opacity-60">|</span>
-        <span className="opacity-60">{String(slides.length).padStart(2, "0")}</span>
+      {/* 하단 인디케이터 */}
+      <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 flex items-center space-x-4 text-white z-30">
+        <span className="opacity-70 text-sm font-medium">
+          {String(current + 1).padStart(2, "0")} | {String(slides.length).padStart(2, "0")}
+        </span>
         <div className="flex space-x-2 ml-4">
           {slides.map((_, i) => (
             <button
               key={i}
-              className={`w-3 h-3 rounded-full border border-white ${
-                current === i ? "bg-white" : "bg-transparent"
+              className={`w-3 h-3 rounded-full border border-white transition-all duration-300 ${
+                current === i ? "bg-white scale-110" : "bg-transparent"
               }`}
               onClick={() => handleDotClick(i)}
-            ></button>
+            />
           ))}
         </div>
       </div>

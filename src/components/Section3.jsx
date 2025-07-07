@@ -1,77 +1,72 @@
 import React from "react";
-
-const faqList = [
-  {
-    question: "열방상담소란 무엇인가요?",
-    answer:
-      "열방상담소는 환자 및 보호자분들의 궁금증을 해소해드리기 위한 건강 상담 플랫폼입니다.",
-  },
-  {
-    question: "상담은 어떻게 받을 수 있나요?",
-    answer: "CURAEL 공식 홈페이지를 통해 온라인으로 상담 신청이 가능합니다.",
-  },
-  {
-    question: "전문가는 어떤 분들인가요?",
-    answer: "각 분야의 약사님들 및 의료 전문가들이 직접 상담을 진행합니다.",
-  },
-];
-
-const experts = [
-  { name: "김훈하 약사", image: "/images/expert1.jpg" },
-  { name: "전정미 약사", image: "/images/expert2.jpg" },
-];
+import { Link } from "react-router-dom";
 
 export default function Section3() {
-  const handleNavigate = () => {
-    window.location.href = "/consult"; // 클릭 시 이동할 페이지
-  };
-
   return (
-    <section className="bg-gray-50 py-20 px-6">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">열방상담소</h2>
-        <p className="text-gray-600 text-lg mb-16">
-          약사님과 함께하는 건강 상담소, 궁금한 건 무엇이든 물어보세요!
-        </p>
+    <section className="relative w-full min-h-screen overflow-hidden font-sans">
+      {/* 배경 이미지 */}
+      <div
+        className="absolute inset-0 bg-no-repeat bg-cover bg-center z-0"
+        style={{ backgroundImage: "url('/images/consult-banner.png')" }}
+      />
+      {/* 어두운 오버레이 */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
-        {/* Q&A 리스트 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {faqList.map((faq, index) => (
-            <div
-              key={index}
-              onClick={handleNavigate}
-              className="bg-white rounded-xl shadow-md p-6 text-left cursor-pointer transition-transform hover:scale-105 hover:shadow-lg"
-            >
-              <h3 className="text-xl font-semibold text-green-700 mb-3">
-                Q. {faq.question}
-              </h3>
-              <p className="text-gray-700 text-base">A. {faq.answer}</p>
-            </div>
-          ))}
-        </div>
+      {/* 콘텐츠 */}
+      <div className="relative z-20 w-full pt-[93px] md:pt-[260px] pb-24 px-4 md:px-12 text-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-sm md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
+            HEALING CONSULT
+          </p>
+          <h2 className="text-[30px] md:text-[44px] font-bold mb-6">열방상담소</h2>
+          <p className="text-base md:text-xl font-light mb-10 leading-relaxed">
+            병원 치료와 병행할 수 있는 <span className="font-semibold text-green-300">통합 암치료 가이드</span><br />
+            <strong className="text-green-300">전문 약사</strong>가 혈액검사, 생활습관, 식이기록 등을 분석해<br />
+            <strong className="text-green-300">개인별 맞춤형 보완전략</strong>을 제시해 드립니다.
+          </p>
 
-        {/* 전문가 프로필 */}
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">전문가 소개</h3>
-        <div className="flex justify-center gap-12 flex-wrap">
-          {experts.map((expert, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center hover:scale-105 transition-transform"
-            >
-              {/* 이미지 감싸는 박스 추가 */}
-              <div className="w-36 h-36 rounded-full overflow-hidden shadow-lg mb-3">
-                <img
-                  src={expert.image}
-                  alt={expert.name}
-                  className="w-full h-full object-cover scale-110 translate-y-1"
-                />
-              </div>
-              
-              <span className="text-lg font-medium text-gray-700">
-                {expert.name}
-              </span>
+          {/* 3단 핵심 요약 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 text-center text-sm md:text-base text-white max-w-5xl mx-auto">
+            <div>
+              <h4 className="font-semibold text-green-200 mb-2">💬 상담 방식</h4>
+              <p>
+                사전 문답지와 건강자료 제출 후<br />
+                <strong className="text-green-300">카카오 채널</strong>을 통해 예약 진행
+              </p>
             </div>
-          ))}
+            <div>
+              <h4 className="font-semibold text-green-200 mb-2">👨‍⚕️ 상담 전문가</h4>
+              <p>
+                <strong className="text-green-300">김훈하 · 전정미 약사</strong>가 직접 진행<br />
+                암 치료에 특화된 전략 제공
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-green-200 mb-2">📄 준비사항</h4>
+              <p>
+                혈액검사, CT, 문답지 등 필수<br />
+                <strong className="text-green-300">상세 정보는 페이지 하단 참고</strong>
+              </p>
+            </div>
+          </div>
+
+          {/* CTA 버튼들 */}
+          <div className="mt-10 flex flex-col md:flex-row justify-center items-center gap-4">
+            <Link
+              to="/consult"
+              className="bg-white text-green-800 px-6 py-3 rounded font-semibold shadow hover:bg-green-100 transition duration-300"
+            >
+              자세히 보러 가기 →
+            </Link>
+            <a
+              href="https://pf.kakao.com/_Apnys"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-700 text-white px-6 py-3 rounded font-semibold hover:bg-green-800 transition duration-300"
+            >
+              카카오 채널로 상담 신청 →
+            </a>
+          </div>
         </div>
       </div>
     </section>

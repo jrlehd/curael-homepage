@@ -1,48 +1,84 @@
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaInstagram } from "react-icons/fa";
 import { SiKakaotalk } from "react-icons/si";
 
-export default function Footer() {
+export default function FooterCompact() {
   return (
-    <section className="bg-[#0d121e] text-white py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
-        {/* 왼쪽: 로고 + 회사정보 */}
-        <div className="mb-8 md:mb-0 flex-1">
+    <footer className="bg-[#f4f4f4] text-gray-500 text-[13px] md:text-[15px] py-10 md:py-12 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+        {/* Left: Logo */}
+        <div className="flex-shrink-0 flex items-center justify-center md:justify-start w-full md:w-auto pr-4 md:pr-10">
           <img
-            src="/images/Wordmark_White_ver.png"
+            src="/images/Signature Horizontal.png"
             alt="CURAEL Logo"
-            className="w-32 mb-4"
+            className="w-36 md:w-40 mx-auto md:mx-0"
           />
-          <p>회사명: 큐라엘</p>
-            <p>이메일: yulbangrc@gmail.com</p>
-            <p>전화번호: 02-935-9843</p>
-            <p>주소: 서울특별시 노원구 동일로 1622</p>
-          <p className="text-xs text-gray-400 mt-3">
-            © 2025 CURAEL. All rights reserved.
-          </p>
         </div>
 
-        {/* 오른쪽: SNS 아이콘 버튼 */}
-        <div className="flex-1 flex md:justify-end gap-6 items-center text-xl">
-          <a
-            href="https://www.youtube.com/@yulbangsangdamso"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-600 transition-colors"
-            title="YouTube"
-          >
-            <FaYoutube size={32} />
-          </a>
-          <a
-            href="https://pf.kakao.com/_Apnys" // ← 카카오 채널 주소로 변경
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition-colors"
-            title="Kakao Channel"
-          >
-            <SiKakaotalk size={32} />
-          </a>
+        {/* Middle: Company Info */}
+        <div className="flex-grow flex flex-col items-center md:items-start text-center md:text-left w-full md:w-auto">
+          <p className="font-semibold text-gray-500">
+            (주)큐라엘 &nbsp;&nbsp; 서울특별시 노원구 동일로 1622 &nbsp;&nbsp; 대표: 김훈하
+          </p>
+          <p className="text-gray-500">
+            전화번호: 02-935-9843 &nbsp;&nbsp; 이메일: yulbangrc@gmail.com
+          </p>
+          <p className="mt-2 text-gray-500">© 2025 CURAEL. All rights reserved.</p>
+        </div>
+
+        {/* Right: Store Buttons + SNS */}
+        <div className="flex flex-col items-center md:items-end justify-center gap-3 w-full md:w-auto">
+          {/* Store Buttons */}
+          <div className="flex flex-col gap-2 w-full md:w-auto items-center">
+            <a
+              href="https://mkt.shopping.naver.com/link/683fa040b7c8c573b305dbdc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-52 md:w-60 bg-transparent border border-gray-300 rounded-full px-4 md:px-6 py-1.5 md:py-2 text-xs md:text-sm text-gray-500 hover:bg-gray-100 transition text-center"
+            >
+              베지셀 스토어
+            </a>
+            <a
+              href="https://mkt.shopping.naver.com/link/68215855814c2c37cf00102b"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-52 md:w-60 bg-transparent border border-gray-300 rounded-full px-4 md:px-6 py-1.5 md:py-2 text-xs md:text-sm text-gray-500 hover:bg-gray-100 transition text-center"
+            >
+              자연하 스토어
+            </a>
+          </div>
+
+          {/* SNS Icons */}
+          <div className="flex gap-6 mt-4 text-xl justify-center md:justify-end">
+            <a
+              href="https://www.youtube.com/@yulbangsangdamso"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#cd201f] hover:text-red-600"
+              title="YouTube"
+            >
+              <FaYoutube size={24} />
+            </a>
+            <a
+              href="https://pf.kakao.com/_Apnys"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#fae100] hover:text-yellow-400"
+              title="Kakao"
+            >
+              <SiKakaotalk size={24} />
+            </a>
+            <a
+              href="https://instagram.com/hoonha_yulbang?igsh=NGhkaW5rcDV3a2V1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#e1306c] hover:text-pink-500"
+              title="Instagram"
+            >
+              <FaInstagram size={24} />
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

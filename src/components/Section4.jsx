@@ -1,58 +1,87 @@
 export default function Section4() {
   const researchItems = [
     {
-      title: "신약 연구소",
-      desc: "소화, 암, 면역질환을 중심으로\n글로벌 무대에서 주목하는 혁신 신약을 연구합니다.",
-      image: "/images/rnd1.png",
+      title: "신약 연구",
+      desc: (
+        <>
+          항암 및 면역 질환 치료를 위한<br />혁신적인 신약을 연구합니다.
+        </>
+      ),
+      icon: "/images/icon1.png",
     },
     {
-      title: "식품 연구소",
-      desc: "감염 예방백신뿐만 아니라 차세대 분야인\n세포유전자치료제를 연구하고 있습니다.",
-      image: "/images/rnd2.png",
+      title: "식품 연구",
+      desc: (
+        <>
+          건강기능식품 개발을 위한<br />영양과 기능성 소재를 연구합니다.
+        </>
+      ),
+      icon: "/images/icon2.png",
     },
   ];
 
   return (
-    <section className="bg-[#f6fafe] py-24 px-6">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-gray-800 mb-6">R&D</h2>
-        <p className="text-2xl font-bold text-gray-800 leading-snug mb-16 whitespace-pre-line">
-          멈추지 않는 혁신, 적극적 연구개발로{"\n"}
-          도전과 성취의 역사를 새로 씁니다.
-        </p>
+    <section className="relative w-full min-h-screen overflow-hidden font-sans">
+      {/* 배경 이미지 */}
+      <div className="absolute inset-0 z-0 hidden md:grid grid-cols-2">
+        <div
+          className="bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/rnd1.png')" }}
+        />
+        <div
+          className="bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/rnd-banner.png')" }}
+        />
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-          {researchItems.map((item, idx) => (
-            <div
-              key={idx}
-              className="relative rounded-3xl overflow-hidden group h-[360px] shadow-xl hover:shadow-2xl transition-all"
+      {/* 모바일용 배경 이미지 */}
+      <div className="absolute inset-0 z-0 grid grid-rows-2 md:hidden">
+        <div
+          className="bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/rnd1.png')" }}
+        />
+        <div
+          className="bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/rnd-banner.png')" }}
+        />
+      </div>
+
+      {/* 어두운 오버레이 */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10" />
+
+      {/* 콘텐츠 */}
+      <div className="relative z-20 w-full pt-[100px] md:pt-[200px] pb-[80px] md:pb-[100px] px-4 md:px-12 text-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-sm md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
+            RESEARCH AND DEVELOPMENT
+          </p>
+          <h2 className="text-[32px] md:text-[48px] font-bold mb-12 md:mb-16">연구/개발</h2>
+
+          {/* 선으로 구분된 영역 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-white/30 gap-10 md:gap-0">
+            {researchItems.map((item, idx) => (
+              <div
+                key={idx}
+                className={`px-6 text-center flex flex-col items-center md:text-left md:items-start ${idx === 0 ? 'md:items-end md:pr-16' : 'md:items-start md:pl-16'}`}
+              >
+                <img src={item.icon} alt="icon" className="w-14 h-14 mb-6" />
+                <h3 className="text-[24px] md:text-[30px] font-semibold mb-3">{item.title}</h3>
+                <p className="text-sm md:text-base leading-relaxed opacity-90 text-center md:text-left">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA 버튼 */}
+          <div className="mt-12">
+            <button
+              className="px-6 py-3 text-sm md:text-base border border-white text-white font-semibold rounded-full 
+                        hover:bg-white hover:text-black transition duration-300 ease-in-out"
+              onClick={() => window.location.href = "/rnd"}
             >
-              {/* 배경 이미지 */}
-              <div className="absolute inset-0 z-0 transition-all duration-500 group-hover:scale-110 group-hover:blur-sm">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* 텍스트 */}
-              <div className="relative z-10 p-8 h-full flex flex-col justify-center bg-white/70 backdrop-blur-md group-hover:bg-white/80 transition-colors duration-300">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-700 whitespace-pre-line">{item.desc}</p>
-              </div>
-            </div>
-          ))}
+              자세히 보기 →
+            </button>
+          </div>
         </div>
-
-        <button
-          className="bg-green-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all"
-          onClick={() => (window.location.href = "/rnd")}
-        >
-          더보기
-        </button>
       </div>
     </section>
   );

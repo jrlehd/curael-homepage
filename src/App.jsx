@@ -8,17 +8,27 @@ import Section1 from "./components/Section1";
 import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";
 import Section4 from "./components/Section4";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 
-import About from "./pages/About";
-import Brands from "./pages/Brands";
-import Product_List from "./pages/Product_List";
-import ProductDetail from "./pages/Product_Detail";
-import Vegicel from "./pages/Vegicel";
-import Jayeonha from "./pages/Jayeonha";
-import RNDPage from "./pages/RND";
-import Consult from "./pages/Consult";
+
+import Company from "./pages/company";
+import GreetingPage from "./pages/company/greeting";
+import Vision from "./pages/company/vision";
+
+import ProductsPage from "./pages/products";
+import Vegicel from "./pages/products/vegicel";
+import Jayeonha from "./pages/products/jayeonha";
+import Books from "./pages/products/books";
+import ProductDetail from "./pages/products/ProductDetail";
+
+import Consult from "./pages/consult";
+import Location from "./pages/consult/location";
+
+import RNDPage from "./pages/rnd";
+
+import Inquiry from "./pages/inquiry";
+
 
 export default function App() {
   return (
@@ -59,14 +69,22 @@ export default function App() {
             }
           />
           {/* 기타 서브 페이지 */}
-          <Route path="/about" element={<About />} />
-          <Route path="/brands" element={<Brands />} />
-          <Route path="/products" element={<Product_List />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/company/greeting" element={<GreetingPage />} />
+          <Route path="/company/vision" element={<Vision />} />
+
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/vegicel" element={<Vegicel />} />
+          <Route path="/products/jayeonha" element={<Jayeonha />} />
+          <Route path="/products/books" element={<Books />} />
           <Route path="/products/:slug" element={<ProductDetail />} />
-          <Route path="/rnd" element={<RNDPage />} />
-          <Route path="/brands/vegicel" element={<Vegicel />} />
-          <Route path="/brands/jayeonha" element={<Jayeonha />} />
+
           <Route path="/consult" element={<Consult />} />
+          <Route path="/consult/location" element={<Location />} />
+
+          <Route path="/rnd" element={<RNDPage />} />
+
+          <Route path="/inquiry" element={<Inquiry />} />
         </Routes>
       </Router>
     </div>

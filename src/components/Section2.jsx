@@ -1,199 +1,117 @@
 import { useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+const categories = ["베지셀", "자연하", "서적"];
+
+const products = {
+  베지셀: {
+    title: "환자를 위한 천연 야채주스, 베지셀",
+    highlight: "천연 야채주스",
+    image: "/images/vegicel_section2.jpg",
+    description:
+      "베지셀은 신선한 야채와 과일 그대로를 담은 천연 식이 파이토케미컬 주스입니다. 항암 중에도 부담 없이 섭취할 수 있도록 무가당, 무첨가, 저열처리 방식으로 만들었으며, 세포 회복과 염증 완화, 면역 균형을 고려해 약사가 직접 설계한 처방형 블렌딩입니다.",
+    link: "/products/12025061911331",
+  },
+  자연하: {
+    title: "자연을 닮은 건강한 흐름을 만듭니다",
+    highlight: "건강한 흐름",
+    image: "/images/jayeonha_section2.jpg",
+    description:
+      "자연의 원리와 흐름을 기반으로 몸과 삶의 회복을 돕는 천연물 기반 건강식품 브랜드입니다. 우리는 단순한 ‘건강식품’을 넘어, 회복·예방·면역·해독 중심의 자연주의 치유 식문화를 만들어갑니다.",
+    link: "/products/22025061911334",
+  },
+  서적: {
+    title: "환자와 함께 만든 치유의 기록",
+    highlight: "함께 만든",
+    image: "/images/book_section2.png",
+    description:
+      "환자가 스스로 암을 이해하고 치유의 주체가 되기를 바랐습니다. 병원 진료만으로는 채워지지 않는 정보와 방향을 책을 통해 전하고자 했습니다. 암을 두려워하기보다, 준비하고 실천할 수 있도록 돕고 싶었습니다. 그래서 그는 책을 ‘교육’이자 ‘회복의 길잡이’로 선택했습니다.",
+    link: "/products/32025061911331",
+  },
+};
+
 const Section2 = () => {
-  const categories = ["DRINKS VEGICEL", "HEALTH 자연하", "BOOKS 서적"];
-
-  const productsMap = {
-    "DRINKS VEGICEL": [
-      {
-        name: "내몸에 베지셀 메이킹 7.4",
-        image: "/images/product1-1.png",
-        description: "채소에서 찾은 건강의 시작",
-        slug: "12025061911331",
-      },
-    ],
-    "HEALTH 자연하": [
-      {
-        name: "그린진",
-        image: "/images/product2-1.png",
-        description: "맑고 깨끗한 자연의 힘",
-        slug: "22025061911334",
-      },
-      {
-        name: "커큐진",
-        image: "/images/product2-2.png",
-        description: "자연에서 찾은 항암 에너지",
-        slug: "22025061911333",
-      },
-      {
-        name: "베리베라진",
-        image: "/images/product2-3.png",
-        description: "상큼한 베리로 가볍게 시작하는 하루",
-        slug: "22025061911332",
-      },
-    ],
-    "BOOKS 서적": [
-      {
-        name: "캔서 위너",
-        image: "/images/product3-1.jpg",
-        description: "암 투병에 용기를 주는 지식과 전략",
-        slug: "32025061911331",
-      },
-      {
-        name: "기적의 항암식단",
-        image: "/images/product3-2.jpg",
-        description: "항암 시기별 맞춤 레시피 119가지 수록",
-        slug: "32025061911332",
-      },
-      {
-        name: "열방약국 유방암 상담소",
-        image: "/images/product3-3.jpg",
-        description: "유방암 환자의 식이요법과 생활 전략",
-        slug: "32025061911334",
-      },
-      {
-        name: "열방약국 말기암 통합요법 상담소",
-        image: "/images/product3-4.jpg",
-        description: "말기암의 희망, 암을 다루는 전략",
-        slug: "32025061911333",
-      },
-    ],
-  };
-
-  const [selected, setSelected] = useState({
-    "DRINKS VEGICEL": 0,
-    "HEALTH 자연하": 0,
-    "BOOKS 서적": 0,
-  });
-
-  const [thumbnailStartIndices, setThumbnailStartIndices] = useState({
-    "DRINKS VEGICEL": 0,
-    "HEALTH 자연하": 0,
-    "BOOKS 서적": 0,
-  });
-
-  const handleThumbnailClick = (category, index) => {
-    const products = productsMap[category];
-    const mid =
-      index === products.length - 1
-        ? Math.max(0, products.length - 3)
-        : Math.max(0, index - 1);
-    setSelected((prev) => ({ ...prev, [category]: index }));
-    setThumbnailStartIndices((prev) => ({ ...prev, [category]: mid }));
-  };
-
-  const handleNext = (category) => {
-    const products = productsMap[category];
-    setSelected((prevSelected) => {
-      const currentIndex = prevSelected[category];
-      const nextIndex = Math.min(currentIndex + 1, products.length - 1);
-      const mid =
-        nextIndex === products.length - 1
-          ? Math.max(0, products.length - 3)
-          : Math.max(0, nextIndex - 1);
-      setThumbnailStartIndices((prev) => ({ ...prev, [category]: mid }));
-      return { ...prevSelected, [category]: nextIndex };
-    });
-  };
-
-  const handlePrev = (category) => {
-    setSelected((prevSelected) => {
-      const currentIndex = prevSelected[category];
-      const prevIndex = Math.max(currentIndex - 1, 0);
-      const mid = Math.max(0, prevIndex - 1);
-      setThumbnailStartIndices((prev) => ({ ...prev, [category]: mid }));
-      return { ...prevSelected, [category]: prevIndex };
-    });
-  };
+  const [active, setActive] = useState("베지셀");
+  const current = products[active];
 
   return (
-    <div className="relative w-full pt-32 pb-18 px-4 md:px-10 xl:px-32">
-      <div className="flex flex-col xl:flex-row xl:justify-center xl:gap-24">
-        {categories.map((category) => {
-          const products = productsMap[category];
-          const selectedIndex = selected[category];
-          const start = thumbnailStartIndices[category];
-          const visibleThumbnails = products.slice(start, start + 3);
-          const selectedProduct = products[selectedIndex];
+    <section className="relative w-full min-h-screen overflow-hidden font-sans">
+      <div
+        className="absolute inset-0 bg-no-repeat bg-center bg-cover z-0"
+        style={{
+          backgroundImage: "url('/images/section2_bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      <div className="absolute inset-0 bg-black opacity-40 z-10" />
 
-          return (
-            <div
-              key={category}
-              className="flex flex-col items-center mb-20 w-full max-w-[300px] xl:max-w-[280px]"
+      <div className="relative z-20 w-full pt-36 md:pt-48 pb-16 px-4 md:px-12 text-white">
+        <div className="text-center mb-4">
+          <p className="text-[12px] md:text-sm tracking-widest mb-0 font-bold">
+            OUR PRODUCT
+          </p>
+          <h2 className="text-[32px] md:text-[36px] font-bold">제품소개</h2>
+        </div>
+
+        <div className="flex justify-center gap-4 md:gap-6 mb-8 flex-wrap">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`text-[14px] md:text-[18px] px-3 py-2 border-b-2 transition font-medium ${
+                active === cat
+                  ? "text-green-400 border-green-400"
+                  : "text-white border-transparent hover:border-white"
+              }`}
             >
-              <p className="text-xl font-bold text-green-700 mb-2">
-                {category.split(" ")[0]}
-              </p>
-              <h3 className="text-3xl font-bold mb-4">
-                {category.split(" ")[1]}
-              </h3>
+              {cat}
+            </button>
+          ))}
+        </div>
 
-              <Link to={`/products/${selectedProduct.slug}`}>
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  className="w-[200px] h-[260px] object-contain rounded-xl mb-8"
-                />
+        <div className="mx-auto w-full max-w-[1000px] bg-white text-black flex flex-col md:flex-row shadow-lg">
+          {/* 이미지 */}
+          <div className="w-full md:w-1/2 h-[180px] md:h-[380px]">
+            <img
+              src={current.image}
+              alt={current.title}
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+
+          {/* 텍스트 */}
+          <div className="w-full md:w-1/2 py-8 px-6 md:py-12 md:px-8 flex flex-col items-start justify-center overflow-hidden">
+            <div className="max-w-full md:max-w-[400px] text-left mx-auto">
+              <h3
+                className="text-[18px] md:text-[26px] mb-3 md:mb-4 leading-snug"
+                style={{ fontWeight: 400 }}
+                dangerouslySetInnerHTML={{
+                  __html: current.title.replace(
+                    current.highlight,
+                    `<strong style="color:#2BAE66;font-weight:900">${current.highlight}</strong>`
+                  ),
+                }}
+              ></h3>
+              {current.description.split("\n\n").map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-[12px] md:text-[13px] text-gray-700 mb-3 md:mb-3 leading-[1.7] font-normal"
+                >
+                  {paragraph}
+                </p>
+              ))}
+              <Link
+                to={current.link}
+                className="text-[13px] md:text-[14px] text-green-800 font-semibold hover:underline"
+              >
+                더보기 →
               </Link>
-
-              <h4 className="text-xl font-semibold mb-6">
-                {selectedProduct.name}
-              </h4>
-              <p className="text-sm text-gray-500 mb-4 text-center px-4">
-                {selectedProduct.description}
-              </p>
-
-              <div className="flex items-center gap-1 justify-center mb-4">
-                {products.length > 3 && (
-                  <button onClick={() => handlePrev(category)} className="p-1">
-                    <FaChevronLeft />
-                  </button>
-                )}
-
-                <div className="flex gap-1">
-                  {visibleThumbnails.map((product, index) => {
-                    const actualIndex = start + index;
-                    return (
-                      <img
-                        key={index}
-                        src={product.image}
-                        alt={product.name}
-                        onClick={() =>
-                          handleThumbnailClick(category, actualIndex)
-                        }
-                        className={`w-20 h-20 object-cover rounded-md cursor-pointer border ${
-                          selectedIndex === actualIndex
-                            ? "border-green-600"
-                            : "border-gray-300"
-                        }`}
-                      />
-                    );
-                  })}
-                </div>
-
-                {products.length > 3 && (
-                  <button onClick={() => handleNext(category)} className="p-1">
-                    <FaChevronRight />
-                  </button>
-                )}
-              </div>
             </div>
-          );
-        })}
+          </div>
+        </div>
       </div>
-
-      {/* 고정 버튼을 이 섹션 내부에 위치시킴 */}
-      <div className="absolute right-6 bottom-6 z-50">
-        <Link
-          to="/products"
-          className="bg-green-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-green-700 transition"
-        >
-          제품 전체 보러가기 →
-        </Link>
-      </div>
-    </div>
+    </section>
   );
 };
 

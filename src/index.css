@@ -3,17 +3,59 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Noto Sans KR';
-  src: url('./assets/fonts/NotoSansKR-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'SUIT';
+  src: local('SUIT'),
+       url('./fonts/SUIT-Thin.ttf') format('truetype');
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Noto Sans KR ExtraBold';
-  src: url('/fonts/NotoSansKR-ExtraBold.ttf') format('truetype');
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-ExtraBold.ttf') format('truetype');
   font-weight: 800;
-  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('./fonts/SUIT-Heavy.ttf') format('truetype');
+  font-weight: 900;
 }
 
 @keyframes zoomOutSlow {
@@ -32,6 +74,10 @@
 .fade-slide {
   animation: fadeInOut 10s ease-in-out infinite;
   transition: opacity 1s ease-in-out;
+}
+
+body {
+  font-family: 'SUIT', sans-serif;
 }
 
 html,
@@ -74,4 +120,45 @@ html {
 
 body {
   @apply bg-[#F5FFFB]; /* 또는 원하는 색상 */
+}
+
+@layer utilities {
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInDown {
+    animation: fadeInDown 0.3s ease-out forwards;
+  }
+
+  @keyframes slideDropdownOpen {
+    from {
+      opacity: 0;
+      max-height: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      max-height: 300px;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDropdownOpen {
+    animation: slideDropdownOpen 0.4s ease-out forwards;
+    overflow: hidden;
+  }
+}
+
+.swiper-pagination,
+.swiper-pagination-bullets,
+.swiper-pagination-bullet {
+  display: none !important;
 }

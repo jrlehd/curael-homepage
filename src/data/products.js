@@ -3,7 +3,7 @@
 export const products = [
   {
     slug: "12025061911331",
-    name: "내몸에 베지셀 메이킹 7.4",
+    name: "내몸에 베지셀 메이킹 7.4 180ml",
     category: "VEGICEL",
     image: ["/images/product1-1.png", "/images/product1-1(1).png"],
     volume: "180ml, 1팩",
@@ -15,7 +15,7 @@ export const products = [
   },
   {
     slug: "22025061911332",
-    name: "베리베라진",
+    name: "베리베라진 1박스 20ml x 30포",
     category: "자연하",
     image: ["/images/product2-3.png", "/images/product2-3.jpg"],
     volume: "20ml x 30포 (600ml)",
@@ -27,7 +27,7 @@ export const products = [
   },
   {
     slug: "22025061911333",
-    name: "커큐진",
+    name: "커큐진 1박스 2g x 30포",
     category: "자연하",
     image: ["/images/product2-2.png", "/images/product2-2.jpg"],
     volume: "2g x 30포 (60g)",
@@ -39,7 +39,7 @@ export const products = [
   },
   {
     slug: "22025061911334",
-    name: "그린진",
+    name: "그린진 원스틱 1박스 1.5g x 30포",
     category: "자연하",
     image: ["/images/product2-1.png", "/images/product2-1.jpg"],
     volume: "1.5g x 30포 (45g)",
@@ -47,7 +47,7 @@ export const products = [
     usage: "150~200ml 물 또는 음료에 1포를 타서 섭취",
     expiration: "제조일로부터 24개월까지",
     storage: "직사광선을 피해 서늘한 곳에 보관",
-    link: "https://mkt.shopping.naver.com/link/683fa4e0d20fbf73c9d5bf44"
+    link: "https://mkt.shopping.naver.com/link/683fa4e08dd273404b72fc5b"
   },
   {
     slug: "32025061911331",

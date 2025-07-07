@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Noto Sans KR"', ...defaultTheme.fontFamily.sans],
+        sans: ['SUIT', 'sans-serif'],
       },
     },
   },
   plugins: [],
 }
+
