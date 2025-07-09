@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom"; // ✅ 추가
+
 
 export default function MobileMenu({ navItems, onClose, isExiting, setIsExiting }) {
   const [openIndex, setOpenIndex] = useState(null);
+  
 
   const getLinkPath = (label, subLabel) => {
-    return (
-      (subLabel === "회사 소개" && "/company") ||
-      (subLabel === "인사말" && "/company/greeting") ||
-      (subLabel === "비전" && "/company/vision") ||
-      (subLabel === "전체 제품" && "/products") ||
-      (subLabel === "베지셀" && "/products/vegicel") ||
-      (subLabel === "자연하" && "/products/jayeonha") ||
-      (subLabel === "서적" && "/products/books") ||
-      (subLabel === "열방상담소" && "/consult") ||
-      (subLabel === "위치 안내" && "/consult/location") ||
-      (subLabel === "문의 안내" && "/inquiry") ||
-      (subLabel === "연구 개발" && "/rnd") ||
-      "#"
-    );
+    if (label === "회사 소개" && subLabel === "회사소개") return "/company"; // 또는 "/company/overview"
+    if (subLabel === "인사말") return "/company/greeting";
+    if (subLabel === "비전") return "/company/vision";
+
+    if (subLabel === "전체제품") return "/products";
+    if (subLabel === "베지셀") return "/products/vegicel";
+    if (subLabel === "자연하") return "/products/jayeonha";
+    if (subLabel === "서적") return "/products/books";
+
+    if (subLabel === "열방상담소") return "/consult";
+    if (subLabel === "위치안내") return "/consult/location";
+
+    if (subLabel === "문의안내") return "/inquiry";
+    if (subLabel === "연구/개발") return "/rnd";
+
+    return "#";
   };
+
 
   return (
     <AnimatePresence>
@@ -81,13 +87,13 @@ export default function MobileMenu({ navItems, onClose, isExiting, setIsExiting 
                     >
                       {item.submenu.map((sub, subIdx) => (
                         <li key={subIdx} className="py-3 px-2 border-b">
-                          <a
-                            href={getLinkPath(item.label, sub)}
+                          <Link
+                            to={getLinkPath(item.label, sub)}
                             onClick={() => setIsExiting(true)}
                             className="block w-full"
                           >
                             {sub}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </motion.ul>
