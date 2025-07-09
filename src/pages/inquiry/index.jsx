@@ -18,7 +18,7 @@ export default function InquiryPage() {
         </p>
       </section>
 
-      <section className="bg-[#f1fcf8] px-4 py-16">
+      <section className="bg-[#ffffff] px-4 py-16">
         <form
           action="https://formspree.io/f/mgvyqyok"
           method="POST"
