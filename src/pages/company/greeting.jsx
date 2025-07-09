@@ -71,7 +71,7 @@ const GreetingPage = () => {
               회복과 희망의 여정을 함께하겠습니다.
             </p>
 
-            <p className="text-[16px] md:text-[20px] font-bold">큐라엘 드림</p>
+            <p className="text-[16px] md:text-[20px] font-bold">김훈하 약사 드림</p>
           </div>
         </div>
       </section>

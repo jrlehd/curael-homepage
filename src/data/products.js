@@ -14,18 +14,6 @@ export const products = [
     link: "https://mkt.shopping.naver.com/link/683fa66c8569a81f0d6d8137"
   },
   {
-    slug: "22025061911332",
-    name: "베리베라진 1박스 20ml x 30포",
-    category: "자연하",
-    image: ["/images/product2-3.png", "/images/product2-3.jpg"],
-    volume: "20ml x 30포 (600ml)",
-    ingredients: "아로니아(폴란드), 구기자(국산), 알로에베라겔동결건조분말(100:1)[알로에베라겔건조분말(200:1), 말토덱스트린], 헛개나무열매(국산), 쇠비름(국산), 정제수",
-    usage: "1일 1회, 1포 섭취",
-    expiration: "상품 외부 표기 / 제조일로부터 24개월까지",
-    storage: "직사광선을 피해 서늘한 곳에 보관",
-    link: "https://mkt.shopping.naver.com/link/683fa4e0e625370ec15b2410"
-  },
-  {
     slug: "22025061911333",
     name: "커큐진 1박스 2g x 30포",
     category: "자연하",
@@ -36,6 +24,18 @@ export const products = [
     expiration: "제조일로부터 24개월까지",
     storage: "직사광선을 피해 서늘한 곳에 보관",
     link: "https://mkt.shopping.naver.com/link/683fa4e0d20fbf73c9d5bf43"
+  },
+  {
+    slug: "22025061911332",
+    name: "베리베라진 1박스 20ml x 30포",
+    category: "자연하",
+    image: ["/images/product2-3.png", "/images/product2-3.jpg"],
+    volume: "20ml x 30포 (600ml)",
+    ingredients: "아로니아(폴란드), 구기자(국산), 알로에베라겔동결건조분말(100:1)[알로에베라겔건조분말(200:1), 말토덱스트린], 헛개나무열매(국산), 쇠비름(국산), 정제수",
+    usage: "1일 1회, 1포 섭취",
+    expiration: "상품 외부 표기 / 제조일로부터 24개월까지",
+    storage: "직사광선을 피해 서늘한 곳에 보관",
+    link: "https://mkt.shopping.naver.com/link/683fa4e0e625370ec15b2410"
   },
   {
     slug: "22025061911334",
@@ -54,7 +54,7 @@ export const products = [
     name: "캔서 위너",
     category: "서적",
     image: "/images/product3-1.jpg",
-    author: "김훈하, 전경미",
+    author: "김훈하, 전정미",
     publisher: "큐라엘출판",
     description: "‘캔서위너’는 재발·전이암 환자에게 희망을 전하는 책으로 \n암을 극복한 김훈하 약사의 천연물·식이요법 경험이 담겨 있습니다 \n병원 치료만으로는 부족한 암 관리의 해답을 환자 스스로 찾을 수 있도록 안내합니다",
     link: "https://product.kyobobook.co.kr/detail/S000213728553"

@@ -184,7 +184,7 @@ const Consult = () => {
           rel="noopener noreferrer"
           className="inline-block bg-yellow-500 text-white text-sm md:text-lg font-semibold px-8 py-3 rounded-full hover:bg-yellow-600 transition"
         >
-          카카오 채널로 상담 신청하기
+          카카오톡 채널로 상담 신청하기
         </a>
       </section>
 
