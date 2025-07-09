@@ -30,15 +30,34 @@ const ProductIndex = () => {
       {/* 검색창 (중앙 정렬 + 반응형) */}
       <div className="flex justify-center mb-4 px-4">
         <div className="flex flex-wrap justify-center gap-2 w-full max-w-xl">
-          <select
-            className="border border-gray-300 rounded px-3 py-2.5 text-sm"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          >
-            <option>전체</option>
-            <option>제품명</option>
-            <option>내용</option>
-          </select>
+          
+          {/* ✅ 화살표 커스텀 select */}
+          <div className="relative">
+            <select
+              className="appearance-none border border-gray-300 rounded px-4 py-2.5 text-sm bg-white pr-10"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+            >
+              <option>전체</option>
+              <option>제품명</option>
+              <option>내용</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg
+                className="w-4 h-4 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* 검색창 */}
           <input
             type="text"
             placeholder="검색어를 입력해주세요"
@@ -46,6 +65,8 @@ const ProductIndex = () => {
             onChange={(e) => setSearch(e.target.value)}
             className="border border-gray-300 px-4 py-2.5 rounded text-sm flex-1 min-w-0"
           />
+
+          {/* 버튼 */}
           <button className="bg-gray-800 text-white px-5 py-2.5 rounded text-sm whitespace-nowrap">
             검색
           </button>
@@ -77,7 +98,7 @@ const ProductIndex = () => {
         />
       </div>
       <div className="p-5">
-        <h3 className="text-sm font-semibold text-gray-800">
+        <h3 className="text-[10px] md:text-sm font-semibold text-gray-800">
           {product.name}
         </h3>
       </div>
