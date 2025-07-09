@@ -81,16 +81,68 @@ export default function Vision() {
           </p>
         </section>
 
-        {/* 핵심가치 이미지 (모바일에서 확대) */}
+        {/* 핵심가치 (CORE VALUES) 인포그래픽 섹션 */}
         <section className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 mb-32">
-          <div className="w-full flex justify-center">
-            <img
-              src="/images/core-value-infographic.png"
-              alt="CURAEL Core Values Infographic"
-              className="w-[115%] sm:w-full max-w-[880px] h-auto object-contain"
-            />
+          <div className="flex flex-col md:flex-row justify-center items-stretch divide-y md:divide-y-0 md:divide-x divide-gray-300">
+            {[
+              {
+                key: "C",
+                title: "Cure",
+                icon: "icon-cure.png",
+                desc: "암 치유 접근",
+              },
+              {
+                key: "U",
+                title: "Understanding",
+                icon: "icon-understanding.png",
+                desc: "이해와 교육",
+              },
+              {
+                key: "R",
+                title: "Research",
+                icon: "icon-research.png",
+                desc: "지속 연구",
+              },
+              {
+                key: "A",
+                title: "Advance",
+                icon: "icon-advance.png",
+                desc: "첨단 기술",
+              },
+              {
+                key: "E",
+                title: "Education",
+                icon: "icon-education.png",
+                desc: "지식 제공",
+              },
+              {
+                key: "L",
+                title: "Leap",
+                icon: "icon-leap.png",
+                desc: "치료 혁신",
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex-1 flex flex-col items-center text-center px-4 py-6 md:px-6 md:py-10"
+              >
+                <img
+                  src={`/images/${item.icon}`}
+                  alt={item.title}
+                  className="w-12 h-12 mb-4"
+                />
+                <h4 className="text-[15px] font-bold mb-1">
+                  <span className="text-green-600 text-2xl">{item.key}</span>
+                  <span className="ml-1">{item.title.slice(1)}</span>
+                </h4>
+                <p className="text-base md:text-lg text-gray-500 leading-tight font-semibold">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
+
       </section>
 
       <Footer />
