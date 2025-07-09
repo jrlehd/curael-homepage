@@ -175,7 +175,7 @@ const Consult = () => {
         </div>
       </section>
 
-      <section className="bg-green-50 py-16 rounded-xl text-center shadow max-w-4xl mx-auto mb-24 px-4">
+      <section className="bg-gray-50 py-16 rounded-xl text-center shadow max-w-4xl mx-auto mb-24 px-4">
         <h2 className="text-xl md:text-2xl font-bold mb-4">상담을 원하시나요?</h2>
         <p className="text-sm md:text-base text-gray-600 mb-6">카카오 채널에서 상담 신청을 도와드립니다.</p>
         <a
