@@ -1,12 +1,17 @@
-// FloatingBanner.jsx
 import React, { useEffect, useState } from "react";
 
 const FloatingBanner = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [bottomOffset, setBottomOffset] = useState(24);
+  const [topOffset, setTopOffset] = useState("50%");
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    const handleResize = () => {
+      const isNowMobile = window.innerWidth <= 768;
+      setIsMobile(isNowMobile);
+      setTopOffset(isNowMobile ? "auto" : "50%");
+    };
+
     const handleScroll = () => {
       const footer = document.querySelector("footer");
       const banner = document.getElementById("floating-banner");
@@ -39,7 +44,8 @@ const FloatingBanner = () => {
     return (
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center shadow-lg z-50"
+        className="fixed right-6 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center shadow-lg z-50"
+        style={{ bottom: bottomOffset }}
       >
         ↑
       </button>
@@ -50,7 +56,7 @@ const FloatingBanner = () => {
     <div
       id="floating-banner"
       className="fixed right-2 z-50 flex flex-col overflow-hidden border border-gray-300 rounded-sm bg-white shadow-xl"
-      style={{ bottom: bottomOffset }}
+      style={{ top: topOffset, transform: "translateY(-50%)", bottom: "auto" }}
     >
       <a
         href="https://mkt.shopping.naver.com/link/683fa040b7c8c573b305dbdc"
@@ -73,11 +79,11 @@ const FloatingBanner = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="w-full h-16 flex items-center justify-center border-b border-gray-200 hover:bg-yellow-100"
-        >
+      >
         <img
-            src="/images/kakao-icon.png"
-            alt="카카오톡 채널"
-            className="w-6 h-6"
+          src="/images/kakao-icon.png"
+          alt="카카오톡 채널"
+          className="w-6 h-6"
         />
       </a>
       <button
