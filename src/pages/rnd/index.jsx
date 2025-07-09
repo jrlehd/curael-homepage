@@ -9,32 +9,32 @@ const RNDPage = () => {
     {
       icon: <Leaf className="w-8 h-8" />,
       title: "천연물 선별",
-      description: "전통의학, 최신 논문 기반으로 항암 잠재력이 있는 천연물 선별"
+      description: "의학학 논문 기반으로 항암 가능성이 높은 천연 물질을 선별"
     },
     {
       icon: <FlaskConical className="w-8 h-8" />,
       title: "성분 분석 및 작용기전 검토",
-      description: "in-silico & in-vitro 연구를 통한 기전 및 유효성 확인"
+      description: "분자생물학 & ECM 환경 연구를 통한 작용 기전 및 생리적 효능 확인"
     },
     {
       icon: <Layers3 className="w-8 h-8" />,
       title: "복합 조합 최적화",
-      description: "시너지 중심의 조합 설계 및 최적화"
+      description: "상호작용 시너지를 고려한 복합 보합 설계 및 최적화"
     },
     {
       icon: <PackageCheck className="w-8 h-8" />,
       title: "기능성 제품 개발",
-      description: "기능성 음료 및 건강기능식품으로 실용화"
+      description: "기능성 음료 및 건강기능식품 형태로 제품화"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "임상 데이터 확보",
-      description: "의료기관 연계 데이터 분석 및 환자 피드백 반영"
+      description: "의료기관 협업을 통한 데이터 분석 및 환자 중심의 피드백과 임상 반응 분석 반영"
     },
     {
       icon: <Users2 className="w-8 h-8" />,
       title: "통합 솔루션 확장",
-      description: "정서-신체-영적 회복을 통합한 환자 중심 전략"
+      description: "정서적, 신체적 회복을 아우르는 환자 맞춤형 통합 전략"
     }
   ];
 
@@ -77,7 +77,7 @@ const RNDPage = () => {
         </div>
 
         {/* 약 */}
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-24">
           <div className="w-full md:w-1/2 order-1 md:order-2">
             <img
               src="/images/drug-research.png"
@@ -90,10 +90,10 @@ const RNDPage = () => {
             <h3 className="text-xl md:text-2xl font-bold mb-2">천연물 기반 항암 치료제</h3>
             <p className="text-gray-700 mb-4">
               천연물 조합을 활용하여 항암제의 부작용을 완화하고 면역을 회복시키는 치료제를 연구합니다.
-              전통의학과 최신 논문을 접목한 AI 기반의 조합 설계로 차별화된 암 통합 솔루션을 지향합니다.
+              전통의학과 최신 의학 논문을 접목한 AI 기반의 조합 설계로 차별화된 암 통합 솔루션을 지향합니다.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-gray-800">
-              {["in-silico 분석", "in-vitro 평가", "AI 조합설계", "시너지 연구", "면역보조", "항암보완"].map((item, i) => (
+              {["분자생물학", "ECM 환경", "AI 조합설계", "시너지 연구", "면역보조", "항암보완"].map((item, i) => (
                 <span key={i} className="px-3 py-1 bg-blue-50 border border-blue-200 rounded-full">{item}</span>
               ))}
             </div>

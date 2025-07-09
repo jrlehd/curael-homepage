@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.swiper,
+.swiper-wrapper,
+.swiper-container,
+.swiper-slide,
+.swiper-slide-active,
+.swiper-pagination,
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}

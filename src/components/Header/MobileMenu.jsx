@@ -1,51 +1,62 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function MobileMenu({ navItems, onClose }) {
+export default function MobileMenu({ navItems, onClose, isExiting, setIsExiting }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   const getLinkPath = (label, subLabel) => {
     return (
-      (subLabel === "회사소개" && "/company") ||
+      (subLabel === "회사 소개" && "/company") ||
       (subLabel === "인사말" && "/company/greeting") ||
       (subLabel === "비전" && "/company/vision") ||
-      (subLabel === "전체제품" && "/products") ||
+      (subLabel === "전체 제품" && "/products") ||
       (subLabel === "베지셀" && "/products/vegicel") ||
       (subLabel === "자연하" && "/products/jayeonha") ||
       (subLabel === "서적" && "/products/books") ||
       (subLabel === "열방상담소" && "/consult") ||
-      (subLabel === "위치안내" && "/consult/location") ||
-      (subLabel === "문의안내" && "/inquiry") ||
-      (subLabel === "연구/개발" && "/rnd") ||
+      (subLabel === "위치 안내" && "/consult/location") ||
+      (subLabel === "문의 안내" && "/inquiry") ||
+      (subLabel === "연구 개발" && "/rnd") ||
       "#"
     );
   };
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <motion.div
         key="mobile-menu-wrapper"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="fixed inset-0 z-50"
+        transition={{ duration: 0.3 }}
+        className="fixed inset-0 top-[88px] z-40 flex"
       >
-        {/* 어두운 투명 배경 (헤더 제외한 영역) */}
-        <div className="absolute top-[64px] bottom-0 inset-x-0 bg-black/60 -z-10" />
+        {/* 어두운 배경 */}
+        <motion.div
+          key="overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute inset-0 bg-black/50 z-40"
+          onClick={() => setIsExiting(true)}
+        />
 
         {/* 메뉴 패널 */}
         <motion.div
-          key="mobile-menu"
+          key="menu"
           initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          exit={{ x: "100%" }}
+          animate={{ x: isExiting ? "100%" : 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="absolute top-[64px] inset-x-0 bottom-0 bg-white overflow-y-auto"
+          onAnimationComplete={() => {
+            if (isExiting) {
+              setIsExiting(false);
+              onClose();
+            }
+          }}
+          className="absolute right-0 top-0 w-full bg-white shadow-lg z-50 h-auto"
         >
-          {/* 헤더와 메뉴 사이 구분선 */}
           <div className="border-t border-gray-300" />
-
           <ul className="divide-y divide-gray-200">
             {navItems.map((item, idx) => (
               <li key={idx}>
@@ -72,7 +83,7 @@ export default function MobileMenu({ navItems, onClose }) {
                         <li key={subIdx} className="py-3 px-2 border-b">
                           <a
                             href={getLinkPath(item.label, sub)}
-                            onClick={onClose}
+                            onClick={() => setIsExiting(true)}
                             className="block w-full"
                           >
                             {sub}

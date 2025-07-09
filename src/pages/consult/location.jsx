@@ -13,6 +13,31 @@ export default function Location() {
         <div className="w-16 h-1 bg-green-500 mx-auto mb-12" />
       </section>
 
+    {/* 주소 / 연락처 / 이메일 */}
+    <div className="flex flex-col md:flex-row justify-center items-center text-sm md:text-base text-center gap-3 md:gap-12">
+      <div className="flex items-center">
+        <strong className="mr-2">Addr.</strong>
+        <span>서울 노원구 동일로 1622 유성상가 1층</span>
+      </div>
+      <div className="flex items-center">
+        <strong className="mr-2">Tel.</strong>
+        <span>02-935-9843</span>
+      </div>
+      <div className="flex items-center">
+        <strong className="mr-2">Email.</strong>
+        <span>yulbangrc@gmail.com</span>
+      </div>
+    </div>
+
+    {/* 하단 안내 문구 2개 */}
+    <div className="mt-10 space-y-4 text-center font-semibold text-sm md:text-lg">
+      <p>수락산역(7호선) 3번 출구에서 도보 약 400m 직진</p>
+      <p>건물 앞 주차 가능</p>
+    </div>
+      
+      {/* 지도와 텍스트 사이 구분선 */}
+    <hr className="border-t border-gray-300 mb-10 mt-10" />
+      
       {/* 구글 지도 */}
       <div className="flex justify-center px-4 md:px-0">
         <iframe
@@ -28,33 +53,12 @@ export default function Location() {
       </div>
 
       {/* 연락처 정보 */}
-      <section className="bg-[#f1fcf8] px-4 pt-12 pb-24 mb-24">
+      <section className="bg-[#ffffff] px-4 pt-12 pb-24 mb-24">
   <div className="max-w-6xl mx-auto w-full">
 
-    {/* 지도와 텍스트 사이 구분선 */}
-    <hr className="border-t border-gray-300 mb-10 mt-20" />
 
-    {/* 주소 / 연락처 / 이메일 */}
-    <div className="flex flex-col md:flex-row justify-center items-center text-sm md:text-base text-center gap-3 md:gap-12">
-      <div className="flex items-center">
-        <strong className="mr-2">Addr.</strong>
-        <span>서울 노원구 동일로 1622 유성상가 1층</span>
-      </div>
-      <div className="flex items-center">
-        <strong className="mr-2">Tel.</strong>
-        <span>010-2319-1974</span>
-      </div>
-      <div className="flex items-center">
-        <strong className="mr-2">Email.</strong>
-        <span>yulbangrc@gmail.com</span>
-      </div>
-    </div>
 
-    {/* 하단 안내 문구 2개 */}
-    <div className="mt-10 space-y-4 text-center font-semibold text-sm md:text-lg">
-      <p>수락산역(7호선) 3번 출구에서 도보 약 400m 직진</p>
-      <p>건물 앞 주차 가능</p>
-    </div>
+    
 
   </div>
 </section>

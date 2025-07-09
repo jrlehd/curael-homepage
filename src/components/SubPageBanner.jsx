@@ -23,9 +23,18 @@ export default function SubPageBanner({ page }) {
           {engTitle}
         </p>
         <h1 className="text-2xl md:text-5xl font-bold">{title}</h1>
-        <p className="text-sm md:text-lg font-SemiBold opacity-90">
-          {subText}
-        </p>
+        {Array.isArray(subText) ? (
+          <p className="text-sm md:text-xl font-SemiBold opacity-90">
+            {subText.map((line, idx) => (
+              <React.Fragment key={idx}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </p>
+        ) : (
+          <p className="text-sm md:text-lg font-SemiBold opacity-90">{subText}</p>
+        )}
       </div>
     </section>
   );

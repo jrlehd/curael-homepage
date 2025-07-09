@@ -3,7 +3,7 @@ import { SiKakaotalk } from "react-icons/si";
 
 export default function FooterCompact() {
   return (
-    <footer className="bg-[#f4f4f4] text-gray-500 text-[13px] md:text-[15px] py-10 md:py-12 px-6">
+    <footer className="bg-[#FFF9F4] text-gray-500 text-[13px] md:text-[15px] py-10 md:py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex items-center justify-center md:justify-start w-full md:w-auto pr-4 md:pr-10">

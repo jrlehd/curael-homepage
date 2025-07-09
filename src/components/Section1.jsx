@@ -60,15 +60,15 @@ export default function Section1() {
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-20 px-4 text-white">
         {/* ① CURAEL (작고 굵게) */}
         <p
-          className="text-xs md:text-sm mb-3 tracking-widest"
-          style={{ fontFamily: "'Nanum Gothic'", fontWeight: 800 }}
+          className="text-sm md:text-lg mb-3 tracking-widest"
+          style={{ fontFamily: "'SUIT'", fontWeight: 900 }}
         >
           CURAEL
         </p>
 
         {/* ② 대표 문구 (가장 크게, 일부 단어만 Extrabold) */}
         <h2
-          className="text-3xl md:text-5xl leading-snug tracking-tight mb-5"
+          className="text-3xl md:text-6xl leading-snug tracking-tight mb-5"
           style={{ fontFamily: "'Nanum Gothic'", fontWeight: 400 }}
         >
           From <strong style={{ fontWeight: 800 }}>Nature</strong> To{" "}
@@ -77,10 +77,16 @@ export default function Section1() {
 
         {/* ③ 설명 문구 (중간 크기, regular) */}
         <p
-          className="text-sm md:text-3xl leading-relaxed max-w-xl opacity-90"
+          className="text-base md:text-3xl leading-relaxed max-w-xl opacity-90"
           style={{ fontFamily: "'Nanum Gothic'", fontWeight: 500 }}
         >
           자연에서 답을 찾다
+        </p>
+        <p
+          className="text-base md:text-3xl leading-relaxed max-w-xl opacity-90"
+          style={{ fontFamily: "'Nanum Gothic'", fontWeight: 500 }}
+        >
+          암 치유의 새로운 길
         </p>
       </div>
 

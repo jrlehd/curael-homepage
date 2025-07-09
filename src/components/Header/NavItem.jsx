@@ -7,7 +7,8 @@ const NavItem = ({
   textColor = "text-black",
   textSize = "text-base",
   fontWeight = "font-normal",
-  disableHover = false, // ✅ 새로 추가
+  disableHover = false, 
+  customStyle = {},
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const showDropdown = submenu.length > 0;
@@ -28,6 +29,7 @@ const NavItem = ({
     >
       <div
         className={`cursor-pointer ${textColor} ${textSize} ${fontWeight} transition-colors duration-200`}
+        style={customStyle}
       >
         {label}
       </div>

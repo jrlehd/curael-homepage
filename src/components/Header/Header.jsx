@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
 import MobileMenu from "./MobileMenu";
 import { Sling as Hamburger } from "hamburger-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence  } from "framer-motion";
 
 export default function Header() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -10,10 +10,17 @@ export default function Header() {
   const [hovered, setHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isExiting, setIsExiting] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setWindowWidth(width);
+      setIsMobile(width < 1025);
+    };
     handleScroll();
     handleResize();
     window.addEventListener("scroll", handleScroll);
@@ -24,23 +31,43 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
   const navItems = [
-    { label: "회사소개", submenu: ["회사소개", "인사말", "비전"] },
-    { label: "제품소개", submenu: ["전체제품", "베지셀", "자연하", "서적"] },
+    { label: "회사 소개", submenu: ["회사소개", "인사말", "비전"] },
+    { label: "제품 소개", submenu: ["전체제품", "베지셀", "자연하", "서적"] },
     { label: "열방상담소", submenu: ["열방상담소", "위치안내"] },
-    { label: "연구/개발", submenu: ["연구/개발"] },
-    { label: "문의안내", submenu: ["문의안내"] },
+    { label: "연구 개발", submenu: ["연구/개발"] },
+    { label: "문의 안내", submenu: ["문의안내"] },
   ];
 
   const headerClass = `fixed top-0 left-0 w-full z-50 border-b transition-all duration-300
     ${scrolled || hovered || mobileMenuOpen ? "bg-white text-black border-gray-200 shadow-sm" : "bg-transparent text-white border-white/30"}`;
+
+  const getFontSize = () => {
+    if (windowWidth > 1300) return "17px";
+    if (windowWidth > 1200) return "16px";
+    if (windowWidth > 1100) return "15px";
+    if (windowWidth > 1025) return "14px";
+    return "13px";
+  };
+
+  const getGap = () => {
+    if (windowWidth > 1300) return "5rem";
+    if (windowWidth > 1200) return "4rem";
+    if (windowWidth > 1100) return "3.5rem";
+    if (windowWidth > 1025) return "3rem";
+    return "2rem";
+  };
 
   return (
     <header className={headerClass}>
       <div
         className={`w-full px-4 md:px-8 ${
           isMobile ? "py-5 min-h-[60px]" : "py-9 min-h-[80px]"
-        } flex items-center justify-between relative`}
+        } flex items-center justify-between`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => {
           setHovered(false);
@@ -48,20 +75,22 @@ export default function Header() {
         }}
       >
         {/* 로고 */}
-        <a href="/" className="ml-12">
-          <img
-            src={scrolled || hovered || mobileMenuOpen ? "/images/SymbolMark.png" : "/images/SymbolMark_dark.png"}
-            alt="Logo"
-            className={`transition-all duration-300 ${isMobile ? "h-6" : "h-12"}`}
-          />
-        </a>
+        <div className="shrink-0">
+          <a href="/">
+            <img
+              src={scrolled || hovered || mobileMenuOpen ? "/images/SymbolMark.png" : "/images/SymbolMark_dark.png"}
+              alt="Logo"
+              className={`transition-all duration-300 ${isMobile ? "h-6" : "h-12"}`}
+            />
+          </a>
+        </div>
 
         {/* 데스크탑 메뉴 */}
         {!isMobile && (
           <motion.nav
-            className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-x-[5rem]"
-            animate={{ gap: hovered ? "6rem" : "5rem" }}
-            transition={{ duration: 0.4 }}
+            className={`flex flex-grow justify-center`}
+            animate={hasMounted ? { gap: hovered ? "6rem" : getGap() } : false}
+            transition={{ duration: hasMounted ? 0.4 : 0 }}
           >
             {navItems.map((item, index) => (
               <NavItem
@@ -70,7 +99,8 @@ export default function Header() {
                 submenu={item.submenu}
                 textColor={scrolled || hovered || mobileMenuOpen ? "text-black" : "text-white"}
                 fontWeight="font-medium"
-                textSize="text-[17px]"
+                textSize="text-inherit"
+                customStyle={{ fontSize: getFontSize() }}
                 disableHover={false}
                 onHover={() => setHoveredIndex(index)}
                 onLeave={() => setHoveredIndex(null)}
@@ -81,15 +111,18 @@ export default function Header() {
 
         {/* 햄버거 메뉴 (모바일 전용) */}
         {isMobile && (
-          <div className="absolute right-12 top-1/2 -translate-y-1/2 z-[999]">
+          <div className="shrink-0">
             <Hamburger
               toggled={mobileMenuOpen}
               toggle={(val) => {
-                setMobileMenuOpen(val);
-                setHovered(val); // 강제로 hovered true 유지
+                if (!val) {
+                  setIsExiting(true); // 👈 닫을 때는 exit 플래그만 변경
+                } else {
+                  setMobileMenuOpen(true); // 열 때는 바로 열림
+                }
               }}
               size={36}
-              color={scrolled || mobileMenuOpen ? "#000" : "#fff"} // 흰색 → 열렸을 때 검정
+              color={scrolled || hovered || mobileMenuOpen ? "#000" : "#fff"}
               rounded
               duration={0.4}
             />
@@ -97,10 +130,17 @@ export default function Header() {
         )}
       </div>
 
-      {/* 모바일 메뉴 */}
-      {mobileMenuOpen && isMobile && (
-        <MobileMenu navItems={navItems} onClose={() => setMobileMenuOpen(false)} />
-      )}
+      {/* 모바일 메뉴 렌더링 (애니메이션 대응) */}
+      <AnimatePresence>
+        {(mobileMenuOpen || isExiting) && isMobile && (
+          <MobileMenu
+            navItems={navItems}
+            onClose={() => setMobileMenuOpen(false)}
+            isExiting={isExiting}
+            setIsExiting={setIsExiting}
+          />
+        )}
+      </AnimatePresence>
     </header>
   );
 }

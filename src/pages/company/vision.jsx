@@ -76,7 +76,7 @@ export default function Vision() {
           </p>
           <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mt-1">핵심가치</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
-            치유를 향한 첫걸음,<br className="sm:hidden" />
+            치유를 향한 첫걸음<br />
             과학적 근거와 자연의 힘으로 시작합니다.
           </p>
         </section>

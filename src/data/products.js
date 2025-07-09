@@ -56,7 +56,7 @@ export const products = [
     image: "/images/product3-1.jpg",
     author: "김훈하, 전경미",
     publisher: "큐라엘출판",
-    description: "‘캔서위너’는 재발·전이암 환자에게 희망을 전하는 책으로, 암을 극복한 김훈하 약사의 천연물·식이요법 경험이 담겨 있습니다. 병원 치료만으로는 부족한 암 관리의 해답을 환자 스스로 찾을 수 있도록 안내합니다.",
+    description: "‘캔서위너’는 재발·전이암 환자에게 희망을 전하는 책으로 \n암을 극복한 김훈하 약사의 천연물·식이요법 경험이 담겨 있습니다 \n병원 치료만으로는 부족한 암 관리의 해답을 환자 스스로 찾을 수 있도록 안내합니다",
     link: "https://product.kyobobook.co.kr/detail/S000213728553"
   },
   {
@@ -66,7 +66,7 @@ export const products = [
     image: "/images/product3-2.jpg",
     author: "김훈하, 김정은",
     publisher: "경향BP",
-    description: "항암 치료 전후 단계별로 필요한 식단을 담은 레시피북. 금지 식품 없이도 맛있고 간편하게 조리할 수 있는 항암 레시피 119가지를 소개합니다.",
+    description: "항암 치료 전후 단계별로 필요한 식단을 담은 레시피북 \n금지 식품 없이도 맛있고 간편하게 조리할 수 있는 항암 레시피 119가지를 소개합니다",
     link: "https://product.kyobobook.co.kr/detail/S000214347306"
   },
   {
@@ -76,7 +76,7 @@ export const products = [
     image: "/images/product3-4.jpg",
     author: "김훈하",
     publisher: "리더북스",
-    description: "말기암, 전이암 환자에게 희망을 전하는 통합요법 가이드. 암 줄기세포의 활성과 억제, 면역조절, 생활습관, 식이요법과 보충제의 조합까지 한 권에 담았습니다.",
+    description: "말기암, 전이암 환자에게 희망을 전하는 통합요법 가이드 \n암 줄기세포의 활성과 억제, 면역조절, 생활습관, 식이요법과 보충제의 조합까지 \n한 권에 담았습니다",
     link: "https://product.kyobobook.co.kr/detail/S000200687516"
   },
   {
@@ -86,7 +86,7 @@ export const products = [
     image: "/images/product3-3.jpg",
     author: "김훈하",
     publisher: "리더북스",
-    description: "유방암 환자에게 꼭 필요한 항암 치료 후 관리법, 보충제 선택법, 부작용 대응, 운동법까지. 유방암 환자가 가장 궁금해하는 질문에 과학적이고 통합적인 해답을 제시합니다.",
+    description: "유방암 환자에게 꼭 필요한 항암 치료 후 관리법, 보충제 선택법, 부작용 대응, 운동법 소개 \n유방암 환자가 가장 궁금해하는 질문에 과학적이고 통합적인 해답을 제시합니다",
     link: "https://product.kyobobook.co.kr/detail/S000001942141"
   }
 ];

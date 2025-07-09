@@ -33,34 +33,42 @@ const GreetingPage = () => {
           <div className="w-full md:w-1/2 text-[#333] text-[13px] md:text-[16px] leading-relaxed text-left">
             <h3 className="text-sm md:text-xl font-semibold text-green-600 mb-2">CEO MESSAGE</h3>
             <h2 className="text-lg md:text-4xl font-bold mb-8">
-              “자연에서 해답을 찾다, <br className="block md:hidden" />
-              암 치유의 새로운 길. 큐라엘”
+              “자연에서 해답을 찾다<br />
+              암 치유의 새로운 길<br /> 큐라엘”
             </h2>
 
             <p className="mb-4 md:mb-5">
-              안녕하십니까. <strong>(주)큐라엘 대표 김훈하 약사</strong>입니다.
+              안녕하십니까.
+            </p>
+
+            <p className="mb-4 md:mb-5">
+              <strong>(주)큐라엘 대표 김훈하 약사</strong>입니다.
+            </p>
+
+
+            <p className="mb-4 md:mb-5">
               큐라엘은 단순한 제품이나 기술이 아닌, 매일 암환자들과 마주하며 나눈 상담과
               수천 명의 간절한 이야기를 바탕으로 시작되었습니다.
             </p>
 
             <p className="mb-4 md:mb-5">
-              약사로서 저는 5,000명 이상의 암환자들과 상담하며 혈액검사, 생활습관,
-              식이요법 등을 함께 고민해왔습니다. 그리고 늘 하나의 질문을 품었습니다:
+              약사로서 5,000명 이상의 암환자들과 상담하며 혈액검사, 생활습관,
+              식이요법 등을 함께 고민해왔습니다.
               "어떻게 하면 더 빠르고 안전하게 암을 이길 수 있을까?"
             </p>
 
             <p className="mb-4 md:mb-5">
-              저의 해답은 <strong>자연</strong>이었습니다. 큐라엘은 파이토케미컬 기반의 천연물 조합과
+              <strong>저의 해답은 자연이었습니다.</strong>
+            </p>
+
+            <p className="mb-4 md:mb-5">
+              큐라엘은 파이토케미컬 기반의 천연물 조합과
               과학적 데이터를 바탕으로 한 통합요법 시스템을 통해 암 치유의 새로운 방향을 제시합니다.
             </p>
 
             <p className="mb-4 md:mb-5">
-              앞으로도 자연과 과학의 균형 속에서 암환자의 삶의 질을 높이고,
+              자연과 과학의 균형 속에서 암환자의 삶의 질을 높이고,
               회복과 희망의 여정을 함께하겠습니다.
-            </p>
-
-            <p className="mb-8 md:mb-10">
-              진심을 담아 최선을 다하겠습니다. 감사합니다.
             </p>
 
             <p className="text-[16px] md:text-[20px] font-bold">큐라엘 드림</p>

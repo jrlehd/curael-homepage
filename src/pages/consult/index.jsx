@@ -44,20 +44,19 @@ const Consult = () => {
           <h3 className="text-2xl md:text-3xl font-bold mb-4">맞춤형 전략 상담 프로그램</h3>
           <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
             열방상담소는 <strong>약사가 직접 맞춤형 전략을 제공</strong>하는 통합 암상담 프로그램입니다. 
-            사전에 제공된 <strong>혈액검사지, 조직검사, CT 등 객관적인 자료</strong>를 바탕으로 
+            사전에 제출한 <strong>혈액검사지, 조직검사, CT 등 객관적인 자료</strong>를 바탕으로 
             환자의 상태에 맞는 <strong>영양 전략과 보완 요법</strong>을 안내합니다.
           </p>
           <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-            상담은 <strong>오직 카카오 채널을 통해 신청 가능</strong>하며, 
-            <strong>사전 문답지와 건강 자료의 제출이 필수</strong>입니다. 
+            상담은 <strong>카카오 채널을 통해 신청 가능</strong>하며, <strong>사전 문답지와 건강 자료의 제출이 필수</strong>입니다.
             최소 2주 이상의 대기 기간이 있을 수 있으며, 예약 시 충분한 자료 준비가 필요합니다.
           </p>
           <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-            상담 약사인 <strong>김훈하</strong>, <strong>전정미</strong> 약사는 각각 요일별로 전문적인 통합 암치료 상담을 진행하며, 
+            상담 약사인 <strong>김훈하</strong>, <strong>전정미</strong> 약사는 각각 요일별로 전문적인 통합 암치료 상담을 진행합니다. 
             일정 및 대상 조건에 따라 상담 여부가 결정됩니다. 
-            환자의 <strong>혈액검사, 식이습관, 생활습관</strong> 등 전반적인 생활 교정은 물론, 
+            환자의 <strong>혈액검사, 식이습관, 생활습관</strong> 등 전반적인 생활 교정을 안내하고, 
             기존 처방전과의 상호작용까지 고려하여 보충제를 제안하고, 
-            <strong>항암 부작용 최소화 및 암세포 사멸 전략</strong>을 제시합니다.
+            <strong>항암 부작용 최소화 및 암치료 전략</strong>을 제시합니다.
           </p>
           <ul className="list-disc pl-5 text-sm md:text-base text-gray-700">
             <li>① 혈액 검사지, 사전 문답지 등을 통한 <strong>정확한 상태 파악</strong></li>
@@ -107,7 +106,7 @@ const Consult = () => {
             <IconText icon={AlertTriangle}>BUN, Creatinine, eGFR 수치가 기준을 벗어난 환자</IconText>
             <IconText icon={AlertTriangle}>복막 전이 환자</IconText>
             <p className="text-red-500 font-semibold text-sm md:text-base">
-              ※ 위 조건에 해당할 경우 상담료 환불이 어려울 수 있으니 신중히 신청해 주세요.
+              ※ 위 조건에 해당할 경우 상담이 어려울 수 있으니 신중히 신청해 주세요.
             </p>
           </motion.div>
         </AccordionItem>

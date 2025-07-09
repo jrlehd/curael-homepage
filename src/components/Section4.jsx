@@ -50,12 +50,12 @@ export default function Section4() {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       {/* 콘텐츠 */}
-      <div className="relative z-20 w-full pt-[100px] md:pt-[200px] pb-[80px] md:pb-[100px] px-4 md:px-12 text-white">
+      <div className="relative z-20 w-full pt-[120px] md:pt-[200px] pb-[80px] md:pb-[100px] px-4 md:px-12 text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
+          <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
             RESEARCH AND DEVELOPMENT
           </p>
-          <h2 className="text-[32px] md:text-[48px] font-bold mb-12 md:mb-16">연구/개발</h2>
+          <h2 className="text-[24px] md:text-[48px] font-bold mb-12 md:mb-16">연구/개발</h2>
 
           {/* 선으로 구분된 영역 */}
           <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-white/30 gap-10 md:gap-0">
@@ -64,9 +64,9 @@ export default function Section4() {
                 key={idx}
                 className={`px-6 text-center flex flex-col items-center md:text-left md:items-start ${idx === 0 ? 'md:items-end md:pr-16' : 'md:items-start md:pl-16'}`}
               >
-                <img src={item.icon} alt="icon" className="w-14 h-14 mb-6" />
-                <h3 className="text-[24px] md:text-[30px] font-semibold mb-3">{item.title}</h3>
-                <p className="text-sm md:text-base leading-relaxed opacity-90 text-center md:text-left">{item.desc}</p>
+                <img src={item.icon} alt="icon" className="w-9 h-9 md:w-14 md:h-14 mb-6" />
+                <h3 className="text-[20px] md:text-[30px] font-semibold mb-3">{item.title}</h3>
+                <p className="text-xs md:text-base leading-relaxed opacity-90 text-center md:text-left">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -74,7 +74,7 @@ export default function Section4() {
           {/* CTA 버튼 */}
           <div className="mt-12">
             <button
-              className="px-6 py-3 text-sm md:text-base border border-white text-white font-semibold rounded-full 
+              className="px-6 py-3 text-xs md:text-base border border-white text-white font-semibold rounded-full 
                         hover:bg-white hover:text-black transition duration-300 ease-in-out"
               onClick={() => window.location.href = "/rnd"}
             >
