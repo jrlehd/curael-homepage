@@ -77,7 +77,7 @@ function App() {
           <Route path="/products/vegicel" element={<Vegicel />} />
           <Route path="/products/jayeonha" element={<Jayeonha />} />
           <Route path="/products/books" element={<Books />} />
-          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/products/:slug" element={<ProductDetail />} />
 
           <Route path="/consult" element={<Consult />} />
           <Route path="/consult/location" element={<Location />} />
