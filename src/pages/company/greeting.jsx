@@ -33,8 +33,8 @@ const GreetingPage = () => {
           <div className="w-full md:w-1/2 text-[#333] text-[13px] md:text-[16px] leading-relaxed text-left">
             <h3 className="text-sm md:text-xl font-semibold text-green-600 mb-2">CEO MESSAGE</h3>
             <h2 className="text-lg md:text-4xl font-bold mb-8">
-              “자연에서 해답을 찾다<br />
-              암 치유의 새로운 길<br /> 큐라엘”
+              자연에서 해답을 찾다<br />
+              암 치유의 새로운 길<br /> 큐라엘
             </h2>
 
             <p className="mb-4 md:mb-5">
