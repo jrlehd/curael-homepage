@@ -98,7 +98,7 @@ const ProductIndex = () => {
         />
       </div>
       <div className="p-5">
-        <h3 className="text-[10px] md:text-sm font-semibold text-gray-800">
+        <h3 className="text-[11px] md:text-sm font-semibold text-gray-800">
           {product.name}
         </h3>
       </div>
