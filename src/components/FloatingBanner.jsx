@@ -7,26 +7,46 @@ const FloatingBanner = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      const isNowMobile = window.innerWidth <= 768;
-      setIsMobile(isNowMobile);
-      setTopOffset(isNowMobile ? "auto" : "50%");
+      const isMobileView = window.innerWidth <= 768;
+      setIsMobile(isMobileView);
     };
 
     const handleScroll = () => {
       const footer = document.querySelector("footer");
       const banner = document.getElementById("floating-banner");
+      const mainBanner = document.querySelector(".main-banner");
+      const subNav = document.querySelector(".subpage-nav");
+      const windowHeight = window.innerHeight;
+      const buffer = 24;
 
-      if (footer && banner) {
-        const footerTop = footer.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        const buffer = 24;
-
-        if (footerTop < windowHeight - buffer) {
-          const overlap = windowHeight - footerTop + buffer;
-          setBottomOffset(overlap);
-        } else {
-          setBottomOffset(24);
+      if (isMobile) {
+        if (footer && banner) {
+          const footerTop = footer.getBoundingClientRect().top;
+          if (footerTop < windowHeight - buffer) {
+            const overlap = windowHeight - footerTop + buffer;
+            setBottomOffset(overlap);
+          } else {
+            setBottomOffset(24);
+          }
         }
+      } else {
+        let adjustedTop = window.innerHeight / 2;
+
+        if (mainBanner) {
+          const mainBottom = mainBanner.getBoundingClientRect().bottom;
+          if (mainBottom > adjustedTop) {
+            adjustedTop = mainBottom + 20;
+          }
+        }
+
+        if (subNav) {
+          const subNavBottom = subNav.getBoundingClientRect().bottom;
+          if (subNavBottom > adjustedTop) {
+            adjustedTop = subNavBottom + 20;
+          }
+        }
+
+        setTopOffset(`${adjustedTop}px`);
       }
     };
 
@@ -38,7 +58,7 @@ const FloatingBanner = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   if (isMobile) {
     return (
@@ -56,7 +76,7 @@ const FloatingBanner = () => {
     <div
       id="floating-banner"
       className="fixed right-2 z-50 flex flex-col overflow-hidden border border-gray-300 rounded-sm bg-white shadow-xl"
-      style={{ top: topOffset, transform: "translateY(-50%)", bottom: "auto" }}
+      style={{ top: topOffset }}
     >
       <a
         href="https://mkt.shopping.naver.com/link/683fa040b7c8c573b305dbdc"
