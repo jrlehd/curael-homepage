@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['SUIT', 'sans-serif'],
+        sans: ['SUIT Variable', 'sans-serif'], // 기본 폰트로 SUIT Variable 지정
+        suit: ['SUIT Variable', 'sans-serif'],
       },
     },
   },
