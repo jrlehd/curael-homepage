@@ -82,7 +82,7 @@ export default function Vision() {
         </section>
 
         {/* 핵심가치 (CORE VALUES) 인포그래픽 섹션 */}
-        <section className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 mb-32">
+        <section className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 mb-16 md:mb-32">
           <div className="flex flex-col md:flex-row justify-center items-stretch divide-y md:divide-y-0 md:divide-x divide-gray-300">
             {[
               {
