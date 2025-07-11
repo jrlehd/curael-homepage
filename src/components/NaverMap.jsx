@@ -4,29 +4,58 @@ export default function NaverMap() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8fv9p09ufp";
+      "https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=8fv9p09ufp&callback=initMap";
     script.async = true;
-    script.onload = () => {
+    document.head.appendChild(script);
+
+    window.initMap = () => {
+      if (!window.naver || !window.naver.maps) return;
+
       const map = new window.naver.maps.Map("map", {
-        center: new window.naver.maps.LatLng(37.673028, 127.053516), // 정확한 열방약국 위치
-        zoom: 17,
+        center: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
+        zoom: 16,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: window.naver.maps.Position.RIGHT_BOTTOM,
+        },
       });
 
       new window.naver.maps.Marker({
-        position: new window.naver.maps.LatLng(37.673028, 127.053516),
+        position: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
         map,
-        title: "열방약국",
+        title: "열방상담소", // ✅ 여기 수정됨
       });
+
+      setTimeout(() => {
+        const controls = document.querySelectorAll(".map_zoom_control");
+        controls.forEach((el) => {
+          el.style.bottom = "24px";
+          el.style.right = "24px";
+          el.style.zIndex = "10";
+        });
+      }, 500);
     };
 
-    document.head.appendChild(script);
+    window.navermap_authFailure = function () {
+      console.error("네이버 지도 인증 실패");
+    };
   }, []);
 
   return (
     <div className="flex justify-center px-4 md:px-0 overflow-x-auto">
       <div
         id="map"
-        className="w-[1280px] h-[620px] rounded-md shadow border border-gray-300"
+        className="
+          relative z-0 
+          w-full max-w-[1280px] 
+          h-[300px] 
+          sm:h-[400px] 
+          md:h-[500px] 
+          lg:h-[620px] 
+          rounded-md shadow 
+          border border-gray-300 
+          pb-12
+        "
       />
     </div>
   );
