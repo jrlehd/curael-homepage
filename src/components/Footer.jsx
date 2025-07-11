@@ -68,7 +68,7 @@ export default function FooterCompact() {
               <SiKakaotalk size={24} />
             </a>
             <a
-              href="https://instagram.com/hoonha_yulbang?igsh=NGhkaW5rcDV3a2V1"
+              href="https://www.instagram.com/yulbang_counseling/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#e1306c] hover:text-pink-500"
