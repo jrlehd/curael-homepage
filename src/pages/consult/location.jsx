@@ -1,6 +1,7 @@
 import SubPageBanner from "../../components/SubPageBanner";
 import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
+import NaverMap from "../../components/NaverMap.jsx";
 
 export default function Location() {
   return (
@@ -36,21 +37,12 @@ export default function Location() {
     </div>
       
       {/* 지도와 텍스트 사이 구분선 */}
-    <hr className="border-t border-gray-300 mb-10 mt-10" />
-      
-      {/* 구글 지도 */}
-      <div className="flex justify-center px-4 md:px-0">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.987116343935!2d127.05339817630052!3d37.67301051801477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb9db49298ee3%3A0xb1e26e5625e30d4f!2z7Je067Cp7IOB64u07IaM!5e0!3m2!1sko!2skr!4v1751503334554!5m2!1sko!2skr"
-          width="1280"
-          height="620"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full max-w-6xl h-[400px] md:h-[620px] rounded-md shadow"
-        ></iframe>
-      </div>
+    <div className="flex justify-center">
+      <hr className="w-[92%] md:w-[80%] border-t border-gray-300 mb-10 mt-10" />
+    </div>
+          
+    {/* 네이버 지도 */}
+      <NaverMap />
 
       {/* 연락처 정보 */}
       <section className="bg-[#ffffff] px-4 pt-12 pb-24 mb-24">
