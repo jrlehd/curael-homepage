@@ -2,14 +2,19 @@ import { useEffect } from "react";
 
 export default function NaverMap() {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=8fv9p09ufp&callback=initMap";
-    script.async = true;
-    document.head.appendChild(script);
+    if (document.getElementById("naver-map-script")) return;
 
-    window.initMap = () => {
-      if (!window.naver || !window.naver.maps) return;
+    const script = document.createElement("script");
+    script.id = "naver-map-script";
+    script.src = "https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=8fv9p09ufp";
+    script.async = true;
+    script.defer = true;
+
+    script.onload = () => {
+      if (!window.naver || !window.naver.maps) {
+        console.error("🛑 네이버 지도 객체 로드 실패");
+        return;
+      }
 
       const map = new window.naver.maps.Map("map", {
         center: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
@@ -23,7 +28,7 @@ export default function NaverMap() {
       new window.naver.maps.Marker({
         position: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
         map,
-        title: "열방상담소", // ✅ 여기 수정됨
+        title: "열방상담소",
       });
 
       setTimeout(() => {
@@ -36,9 +41,7 @@ export default function NaverMap() {
       }, 500);
     };
 
-    window.navermap_authFailure = function () {
-      console.error("네이버 지도 인증 실패");
-    };
+    document.head.appendChild(script);
   }, []);
 
   return (
