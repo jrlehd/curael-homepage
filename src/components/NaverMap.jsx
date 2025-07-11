@@ -2,12 +2,14 @@ import { useEffect } from "react";
 
 export default function NaverMap() {
   useEffect(() => {
-    // ✅ 콜백 먼저 정의
+    const script = document.createElement("script");
+    script.src =
+      "https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=8fv9p09ufp&callback=initMap";
+    script.async = true;
+    document.head.appendChild(script);
+
     window.initMap = () => {
-      if (!window.naver || !window.naver.maps) {
-        console.error("네이버 지도 객체 로드 실패");
-        return;
-      }
+      if (!window.naver || !window.naver.maps) return;
 
       const map = new window.naver.maps.Map("map", {
         center: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
@@ -21,7 +23,7 @@ export default function NaverMap() {
       new window.naver.maps.Marker({
         position: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
         map,
-        title: "열방상담소",
+        title: "열방상담소", // ✅ 여기 수정됨
       });
 
       setTimeout(() => {
@@ -34,17 +36,9 @@ export default function NaverMap() {
       }, 500);
     };
 
-    // ✅ 인증 실패 콜백도 미리
     window.navermap_authFailure = function () {
       console.error("네이버 지도 인증 실패");
     };
-
-    // ✅ 스크립트 로드
-    const script = document.createElement("script");
-    script.src =
-      "https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=8fv9p09ufp&callback=initMap";
-    script.async = true;
-    document.head.appendChild(script);
   }, []);
 
   return (
