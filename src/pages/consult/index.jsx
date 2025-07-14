@@ -154,23 +154,40 @@ const Consult = () => {
 
       <section className="bg-gray-50 p-8 rounded-xl shadow max-w-7xl mx-auto mt-24 mb-24">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">상담 약사 소개</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="rounded-lg bg-white p-6 text-center shadow">
             <img src="/images/expert1.jpg" alt="김훈하 약사" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
             <h3 className="text-lg md:text-xl font-semibold">김훈하 약사</h3>
-            <p className="text-sm md:text-base text-gray-500">동덕여자대학교 약학과 졸업<br />
+            <br />
+            <p className="text-sm md:text-base text-gray-500">
+              동덕여자대학교 약학과 졸업<br />
               열방약국 대표 약사<br />
               現 열방상담소 근무<br />
-              現 CURAEL 대표</p>
+              現 CURAEL 대표
+            </p>
           </div>
           <div className="rounded-lg bg-white p-6 text-center shadow">
             <img src="/images/expert2.jpg" alt="전정미 약사" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
             <h3 className="text-lg md:text-xl font-semibold">전정미 약사</h3>
-            <p className="text-sm md:text-base text-gray-500">연세대학교 생물학과 졸업<br />
+            <br />
+            <p className="text-sm md:text-base text-gray-500">
+              연세대학교 생물학과 졸업<br />
               성균관대학교 약학과 졸업<br />
               前 강남 경희 한방병원 근무<br />
               前 분당차 병원 근무<br />
-              現 열방 상담소 근무</p>
+              現 열방 상담소 근무
+            </p>
+          </div>
+          <div className="rounded-lg bg-white p-6 text-center shadow">
+            <img src="/images/expert3.jpg" alt="백인보 약사" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+            <h3 className="text-lg md:text-xl font-semibold">백인보 약사</h3>
+            <br />
+            <p className="text-sm md:text-base text-gray-500">
+              동덕여자대학교 약학과 졸업<br />
+              前 의정부 성모 병원 근무<br />
+              前 안국 온누리 약국<br />
+              現 열방 약국 근무
+            </p>
           </div>
         </div>
       </section>
