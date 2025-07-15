@@ -185,7 +185,7 @@ const Consult = () => {
             <p className="text-sm md:text-base text-gray-500">
               동덕여자대학교 약학과 졸업<br />
               前 의정부 성모 병원 근무<br />
-              前 안국 온누리 약국<br />
+              前 안국 온누리 약국 외 다수 약국 근무<br />
               現 열방 약국 근무
             </p>
           </div>
