@@ -44,6 +44,7 @@ function AppContent({ menuOpen, setMenuOpen }) {
           element={
             !menuOpen ? (
               <ReactFullpage
+                licenseKey={"SNBHI-6P387-GH9YI-NU486-YYCAN"}
                 scrollingSpeed={1000}
                 navigation={false}
                 render={() => (
