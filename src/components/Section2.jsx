@@ -36,15 +36,13 @@ const Section2 = () => {
 
   return (
     <section className="relative w-full min-h-screen overflow-hidden font-sans">
+      {/* 배경 이미지 */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-center bg-cover z-0"
-        style={{
-          backgroundImage: "url('/images/section2_bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="absolute inset-0 bg-no-repeat bg-cover bg-center z-0"
+        style={{ backgroundImage: "url('/images/section2_bg.png')" }}
       />
-      <div className="absolute inset-0 bg-black opacity-40 z-10" />
+      {/* 어두운 오버레이 */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       <div className="relative z-20 w-full pt-[120px] md:pt-48 pb-16 px-4 md:px-12 text-white">
         <div className="text-center mb-4">
