@@ -4,6 +4,7 @@ import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
 import { Ban, MapPin, FileText, AlertTriangle, Clock, Inbox } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import Seo from "../../components/Seo";
 
 const AccordionItem = ({ icon, question, children }) => {
   const [open, setOpen] = useState(false);
@@ -31,6 +32,8 @@ const IconText = ({ icon: Icon, children }) => (
 const Consult = () => {
   return (
     <>
+    <Seo title="열방상담소" description="암환자 맞춤 상담과 통합 솔루션 안내." />
+
       <SubPageBanner page="consult" />
       <SubPageNav page="consult" />
 

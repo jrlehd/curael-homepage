@@ -2,10 +2,12 @@ import React from "react";
 import SubPageBanner from "../../components/SubPageBanner";
 import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
+import Seo from "../../components/Seo";
 
 const GreetingPage = () => {
   return (
     <div className="bg-white">
+      <Seo title="CEO 인사말" description="큐라엘 대표 인사말과 환자를 위한 약속을 전합니다." />
       {/* 상단 배너 및 네비게이션 */}
       <SubPageBanner page="company" />
       <SubPageNav page="company" />

@@ -2,12 +2,15 @@ import SubPageBanner from "../../components/SubPageBanner";
 import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
 import NaverMap from "../../components/NaverMap.jsx";
+import Seo from "../../components/Seo";
 
 export default function Location() {
   return (
     <div className="bg-white text-gray-900">
       <SubPageBanner page="consult" />
       <SubPageNav page="consult" />
+      <Seo title="위치안내" description="큐라엘 열방상담소 방문을 위한 위치와 교통 안내." />
+
 
       <section className="text-center pt-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">위치 안내</h2>

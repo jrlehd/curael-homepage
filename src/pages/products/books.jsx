@@ -4,6 +4,7 @@ import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
 import { products } from "../../data/products";
 import { Link } from "react-router-dom";
+import Seo from "../../components/Seo";
 
 const Books = () => {
   const [search, setSearch] = useState("");
@@ -19,6 +20,8 @@ const Books = () => {
 
   return (
     <>
+    <Seo title="서적" description="암 관리와 건강에 관한 큐라엘의 지식과 경험을 담은 서적." />
+
       <SubPageBanner page="products" />
       <SubPageNav page="products" />
 

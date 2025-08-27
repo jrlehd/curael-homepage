@@ -4,6 +4,7 @@ import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
 import { products } from "../../data/products";
 import { Link } from "react-router-dom";
+import Seo from "../../components/Seo";
 
 const Vegicel = () => {
   const [search, setSearch] = useState("");
@@ -19,6 +20,8 @@ const Vegicel = () => {
 
   return (
     <>
+    <Seo title="베지셀" description="채소·과일 베이스 건강 제품, 베지셀의 특장점과 섭취 가이드를 확인하세요." />
+
       <SubPageBanner page="products" />
       <SubPageNav page="products" />
 

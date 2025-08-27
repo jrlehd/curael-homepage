@@ -2,10 +2,16 @@ import React from "react";
 import SubPageBanner from "../../components/SubPageBanner";
 import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
+import Seo from "../../components/Seo";
 
 const AboutPage = () => {
   return (
     <div className="bg-white">
+      <Seo 
+        title="회사소개" 
+        description="큐라엘의 미션과 가치, 통합 암치료 철학을 소개합니다." 
+      />
+      
       {/* 상단 배너 및 서브 네비게이션 */}
       <SubPageBanner page="company" />
       <SubPageNav page="company" />

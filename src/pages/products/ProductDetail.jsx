@@ -4,6 +4,7 @@ import { products } from "../../data/products";
 import SubPageBanner from "../../components/SubPageBanner";
 import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
+import Seo from "../../components/Seo";
 
 const ProductDetail = () => {
   const { slug } = useParams();

@@ -4,10 +4,12 @@ import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
 import { products } from "../../data/products";
 import { Link } from "react-router-dom";
+import Seo from "../../components/Seo";
 
 const ProductIndex = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("전체");
+  
 
   const filtered = products.filter((p) => {
     if (!search) return true;
@@ -18,6 +20,10 @@ const ProductIndex = () => {
 
   return (
     <>
+    <Seo
+        title="전체제품"
+        description="큐라엘의 전체 제품을 한눈에 확인하세요."
+      />
       <SubPageBanner page="products" />
       <SubPageNav page="products" />
 

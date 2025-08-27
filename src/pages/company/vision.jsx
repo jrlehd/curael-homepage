@@ -2,12 +2,15 @@ import React from "react";
 import SubPageBanner from "../../components/SubPageBanner";
 import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
+import Seo from "../../components/Seo";
 
 export default function Vision() {
   return (
     <div>
       <SubPageBanner page="company" />
       <SubPageNav page="company" />
+      <Seo title="비전" description="연구·개발과 임상 경험을 바탕으로 암 치료의 새로운 길을 제시합니다." />
+
 
       {/* 타이틀 섹션 */}
       <section className="text-center pt-16">

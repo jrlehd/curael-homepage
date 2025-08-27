@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
+import Seo from "./components/Seo";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header/Header";
@@ -43,6 +44,8 @@ function AppContent({ menuOpen, setMenuOpen }) {
           path="/"
           element={
             !menuOpen ? (
+              <>
+              <Seo />
               <ReactFullpage
                 licenseKey={"SNBHI-6P387-GH9YI-NU486-YYCAN"}
                 scrollingSpeed={1000}
@@ -67,6 +70,7 @@ function AppContent({ menuOpen, setMenuOpen }) {
                   </ReactFullpage.Wrapper>
                 )}
               />
+              </>
             ) : null
           }
         />

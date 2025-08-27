@@ -4,6 +4,7 @@ import SubPageNav from "../../components/SubPageNav";
 import Footer from "../../components/Footer";
 import { products } from "../../data/products";
 import { Link } from "react-router-dom";
+import Seo from "../../components/Seo";
 
 const Jayeonha = () => {
   const [search, setSearch] = useState("");
@@ -19,6 +20,8 @@ const Jayeonha = () => {
 
   return (
     <>
+    <Seo title="자연하" description="자연 유래 성분 기반 건강 솔루션, 자연하." />
+
       <SubPageBanner page="products" />
       <SubPageNav page="products" />
 
