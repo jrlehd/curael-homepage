@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block non-public or admin paths if they exist
+Disallow: /admin
+Disallow: /draft
+
+# Explicitly allow main site sections
+Allow: /products
+Allow: /consult
+Allow: /rnd
+Allow: /company
+Allow: /inquiry
+
+Sitemap: https://curael.co.kr/sitemap.xml
