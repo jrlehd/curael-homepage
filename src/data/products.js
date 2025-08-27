@@ -50,6 +50,18 @@ export const products = [
     link: "https://mkt.shopping.naver.com/link/683fa4e08dd273404b72fc5b"
   },
   {
+    slug: "22025082714422",
+    name: "스텔라진 1박스 3g x 30포",
+    category: "자연하",
+    image: ["/images/product2-4.jpg", "/images/product2-4.png"],
+    volume: "3g x 30포 (45g)",
+    ingredients: "맥주효모 (폴란드산), 쑥분말 (국산), 스피루리나 (미국산), 클로렐라 (국산), 가시오가피 (국산), 산수유(국산), 엉겅퀴 (국산), 황금 (국산)",
+    usage: "1일 3회, 1회 1포를 150~200ml 물 또는 음료에 타서 섭취",
+    expiration: "별도 표기일",
+    storage: "직사광선을 피해 서늘한 곳에 보관",
+    link: "https://mkt.shopping.naver.com/link/683fa4e08dd273404b72fc5b"
+  },
+  {
     slug: "32025061911331",
     name: "캔서 위너",
     category: "서적",
