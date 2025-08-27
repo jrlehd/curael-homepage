@@ -59,7 +59,7 @@ export const products = [
     usage: "1일 3회, 1회 1포를 150~200ml 물 또는 음료에 타서 섭취",
     expiration: "별도 표기일",
     storage: "직사광선을 피해 서늘한 곳에 보관",
-    link: "https://mkt.shopping.naver.com/link/683fa4e08dd273404b72fc5b"
+    link: "https://mkt.shopping.naver.com/link/68ae9ceed657ac14f4a39d4a"
   },
   {
     slug: "32025061911331",
