@@ -23,7 +23,7 @@ export default function InquiryPage() {
 
       <section className="bg-[#ffffff] px-4 py-16">
         <form
-          action="https://formspree.io/f/mgvyqyok"
+          action="https://formspree.io/f/mrbaeqkb"
           method="POST"
           className="max-w-4xl mx-auto text-sm"
         >
