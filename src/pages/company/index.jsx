@@ -61,7 +61,7 @@ const AboutPage = () => {
                 <p className="text-[13px] md:text-base leading-normal md:leading-relaxed opacity-90 text-white text-center">
                   천연물 기반 건강기능식품 개발과<br />
                   통합적 암환자 지원 솔루션을<br />
-                  제공해온 기업입니다.
+                  제공하는 기업입니다.
                 </p>
               </div>
 

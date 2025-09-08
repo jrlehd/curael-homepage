@@ -14,7 +14,19 @@ export const products = [
     link: "https://mkt.shopping.naver.com/link/683fa66c8569a81f0d6d8137"
   },
   {
-    slug: "22025061911333",
+    slug: "12025090811202",
+    name: "베지셀 청귤 라이트 100ml",
+    category: "VEGICEL",
+    image: ["/images/product1-2.png", "/images/product1-2(2).jpg"],
+    volume: "180ml, 1팩",
+    ingredients: "사과 (국산), 당근 (국산), 토마토 (국산), 레드비트 (국산), 양배추 (국산), 브로콜리 (국산), 파프리카 (국산), 정제수",
+    usage: "1회 1팩 섭취",
+    expiration: "상품 외부 표기 / 제조일로부터 30일 이내 생산",
+    storage: "서늘한 곳에 보관, 개봉 후 냉장 보관 권장",
+    link: "https://mkt.shopping.naver.com/link/68b4fac1701e540a81c4055b"
+  },
+  {
+    slug: "22025061911331",
     name: "커큐진 1박스 2g x 30포",
     category: "자연하",
     image: ["/images/product2-2.png", "/images/product2-2.jpg"],
@@ -38,7 +50,7 @@ export const products = [
     link: "https://mkt.shopping.naver.com/link/683fa4e0e625370ec15b2410"
   },
   {
-    slug: "22025061911334",
+    slug: "22025061911333",
     name: "그린진 원스틱 1박스 1.5g x 30포",
     category: "자연하",
     image: ["/images/product2-1.png", "/images/product2-1.jpg"],
@@ -50,7 +62,7 @@ export const products = [
     link: "https://mkt.shopping.naver.com/link/683fa4e08dd273404b72fc5b"
   },
   {
-    slug: "22025082714422",
+    slug: "22025082714424",
     name: "스텔라진 1박스 3g x 30포",
     category: "자연하",
     image: ["/images/product2-4.jpg", "/images/product2-4.png"],
@@ -62,7 +74,7 @@ export const products = [
     link: "https://mkt.shopping.naver.com/link/68ae9ceed657ac14f4a39d4a"
   },
   {
-    slug: "22025082714422",
+    slug: "22025090810595",
     name: "크리노진 1박스 2.5g x 30포",
     category: "자연하",
     image: ["/images/product2-5.png", "/images/product2-5(2).png"],
@@ -90,7 +102,7 @@ export const products = [
     image: "/images/product3-2.jpg",
     author: "김훈하, 김정은",
     publisher: "경향BP",
-    description: "항암 치료 전후 단계별로 필요한 식단을 담은 레시피북 \n금지 식품 없이도 맛있고 간편하게 조리할 수 있는 항암 레시피 119가지를 소개합니다",
+    description: "항암 준비기, 항암 1~2주차, 항암 회복기, 표준치료 후 식단까지 \n시기별 레시피 119가지를 담았습니다",
     link: "https://product.kyobobook.co.kr/detail/S000214347306"
   },
   {
