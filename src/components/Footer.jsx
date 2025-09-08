@@ -20,7 +20,7 @@ export default function FooterCompact() {
             (주)큐라엘 &nbsp;&nbsp; 서울특별시 노원구 동일로 1622 &nbsp;&nbsp; 대표: 김훈하
           </p>
           <p className="text-gray-500">
-            전화번호: 02-935-9843 &nbsp;&nbsp; 이메일: yulbangrc@gmail.com
+            전화번호: 02-935-9843 &nbsp;&nbsp; 이메일: biz@curael.kr
           </p>
           <p className="mt-2 text-gray-500">© 2025 CURAEL. All rights reserved.</p>
         </div>

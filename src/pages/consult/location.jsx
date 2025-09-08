@@ -29,7 +29,7 @@ export default function Location() {
       </div>
       <div className="flex items-center">
         <strong className="mr-2">Email.</strong>
-        <span>yulbangrc@gmail.com</span>
+        <span>biz@curael.kr</span>
       </div>
     </div>
 
