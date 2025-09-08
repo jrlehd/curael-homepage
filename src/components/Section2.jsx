@@ -7,7 +7,7 @@ const products = {
   베지셀: {
     title: "환자를 위한 천연 야채주스, 베지셀",
     highlight: "천연 야채주스",
-    image: "/images/vegicel_section2.jpg",
+    image: "/images/스크린샷 2025-09-02 162614.png",
     description:
       "베지셀은 신선한 야채와 과일 그대로를 담은 천연 파이토케미컬 주스입니다. 항암 중에도 부담 없이 섭취할 수 있도록 무가당, 무첨가, 저열처리 방식으로 만들었습니다. 세포 회복과 염증 완화, 면역 균형을 고려해 약사가 직접 설계한 처방형 블렌딩입니다.",
     link: "/products/vegicel",
@@ -15,7 +15,7 @@ const products = {
   자연하: {
     title: "자연을 닮은 건강한 흐름을 만듭니다",
     highlight: "건강한 흐름",
-    image: "/images/jayeonha_section2.jpg",
+    image: "/images/스크린샷 2025-09-02 162437.png",
     description:
       "자연의 원리와 흐름을 기반으로 몸의 회복을 돕는 천연물 기반 건강식품입니다. 단순한 ‘건강식품’을 넘어, 회복·예방·면역·해독 중심의 자연주의 치유 식문화를 만들어갑니다.",
     link: "/products/jayeonha",
@@ -23,7 +23,7 @@ const products = {
   서적: {
     title: "환자와 함께 만든 치유의 기록",
     highlight: "치유의 기록",
-    image: "/images/book_section2.png",
+    image: "/images/스크린샷 2025-09-02 162254.png",
     description:
       "환자가 스스로 암을 이해하고 치유의 주체가 되기를 바랐습니다. 병원 진료만으로는 채워지지 않는 정보와 방향을 책을 통해 전합니다. 암을 두려워하기보다, 이해하고 건강습관을 실천할 수 있도록 도와줍니다.",
     link: "/products/books",
@@ -45,19 +45,19 @@ const Section2 = () => {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       <div className="relative z-20 w-full pt-[120px] md:pt-48 pb-16 px-4 md:px-12 text-white">
-        <div className="text-center mb-4">
+        <div className="text-center mb-6">
           <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
              OUR PRODUCT
           </p>
-          <h2 className="text-[24px] md:text-[36px] font-bold">제품소개</h2>
+          <h2 className="text-[26px] md:text-[38px] font-bold">제품소개</h2>
         </div>
 
-        <div className="flex justify-center gap-4 md:gap-6 mb-8 flex-wrap">
+        <div className="flex justify-center gap-4 md:gap-6 mb-10 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`text-[12px] md:text-[18px] px-3 py-2 border-b-2 transition font-medium ${
+              className={`text-[13px] md:text-[20px] px-4 py-3 border-b-2 transition font-medium ${
                 active === cat
                   ? "text-green-400 border-green-400"
                   : "text-white border-transparent hover:border-white"
@@ -68,9 +68,9 @@ const Section2 = () => {
           ))}
         </div>
 
-        <div className="mx-auto w-full max-w-[1000px] bg-white text-black flex flex-col md:flex-row shadow-lg">
+        <div className="mx-auto w-full max-w-[1200px] bg-white text-black flex flex-col md:flex-row shadow-2xl rounded-2xl overflow-hidden">
           {/* 이미지 */}
-          <div className="w-full md:w-1/2 h-[180px] md:h-[380px]">
+          <div className="w-full md:w-1/2 h-[190px] md:h-[360px] lg:h-[420px]">
             <img
               src={current.image}
               alt={current.title}
@@ -79,11 +79,11 @@ const Section2 = () => {
           </div>
 
           {/* 텍스트 */}
-          <div className="w-full md:w-1/2 py-8 px-6 md:py-12 md:px-8 flex flex-col items-start justify-center overflow-hidden">
-            <div className="max-w-full md:max-w-[400px] text-left mx-auto">
+          <div className="w-full md:w-1/2 py-8 px-6 md:py-10 md:px-8 lg:py-12 lg:px-10 flex flex-col items-start justify-center overflow-hidden">
+            <div className="max-w-full md:max-w-[520px] text-left mx-auto">
               <h3
-                className="text-[16px] md:text-[26px] mb-3 md:mb-4 leading-snug"
-                style={{ fontWeight: 400 }}
+                className="text-[18px] md:text-[26px] lg:text-[30px] mb-3 md:mb-4 leading-snug"
+                style={{ fontWeight: 500 }}
                 dangerouslySetInnerHTML={{
                   __html: current.title.replace(
                     current.highlight,
@@ -94,14 +94,14 @@ const Section2 = () => {
               {current.description.split("\n\n").map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-[11px] md:text-[13px] text-gray-700 mb-3 md:mb-3 leading-[1.7] font-normal"
+                  className="text-[12px] md:text-[14px] lg:text-[15px] text-gray-700 mb-3 leading-[1.75] font-normal"
                 >
                   {paragraph}
                 </p>
               ))}
               <Link
                 to={current.link}
-                className="text-[12px] md:text-[14px] text-green-800 font-semibold hover:underline"
+                className="inline-block mt-1 text-[13px] md:text-[15px] text-green-800 font-semibold hover:underline"
               >
                 더보기 →
               </Link>
