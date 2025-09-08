@@ -44,7 +44,7 @@ export const products = [
     image: ["/images/product2-1.png", "/images/product2-1.jpg"],
     volume: "1.5g x 30포 (45g)",
     ingredients: "브로콜리(국산), 양배추(국산), 케일(국산), 당근(국산), 보리새싹(국산)",
-    usage: "150~200ml 물 또는 음료에 1포를 타서 섭취",
+    usage: "1일 1~2회, 150~200ml 물 또는 음료에 1포를 타서 섭취",
     expiration: "제조일로부터 24개월까지",
     storage: "직사광선을 피해 서늘한 곳에 보관",
     link: "https://mkt.shopping.naver.com/link/683fa4e08dd273404b72fc5b"
@@ -54,9 +54,21 @@ export const products = [
     name: "스텔라진 1박스 3g x 30포",
     category: "자연하",
     image: ["/images/product2-4.jpg", "/images/product2-4.png"],
-    volume: "3g x 30포 (45g)",
+    volume: "3g x 30포 (90g)",
     ingredients: "맥주효모 (폴란드산), 쑥분말 (국산), 스피루리나 (미국산), 클로렐라 (국산), 가시오가피 (국산), 산수유(국산), 엉겅퀴 (국산), 황금 (국산)",
-    usage: "1일 3회, 1회 1포를 150~200ml 물 또는 음료에 타서 섭취",
+    usage: "1일 3회, 1회 1포를 바로 섭취 후 물 복용",
+    expiration: "별도 표기일",
+    storage: "직사광선을 피해 서늘한 곳에 보관",
+    link: "https://mkt.shopping.naver.com/link/68ae9ceed657ac14f4a39d4a"
+  },
+  {
+    slug: "22025082714422",
+    name: "크리노진 1박스 2.5g x 30포",
+    category: "자연하",
+    image: ["/images/product2-5.png", "/images/product2-5(2).png"],
+    volume: "2.5g x 30포 (75g)",
+    ingredients: "쌍별귀뚜라미(국내산)분말, 볶은현미분말(국내산), 자일리톨, 홍삼분말 (국내산), L-트리토판, 마카분말, 숙지황, 작약, 맥문동, 참당귀 뿌리",
+    usage: "1일 1회, 1회 1포를 바로 섭취 후 물 복용",
     expiration: "별도 표기일",
     storage: "직사광선을 피해 서늘한 곳에 보관",
     link: "https://mkt.shopping.naver.com/link/68ae9ceed657ac14f4a39d4a"
@@ -69,7 +81,7 @@ export const products = [
     author: "김훈하, 전정미",
     publisher: "큐라엘출판",
     description: "‘캔서위너’는 재발·전이암 환자에게 희망을 전하는 책으로 \n암을 극복한 김훈하 약사의 천연물·식이요법 경험이 담겨 있습니다 \n병원 치료만으로는 부족한 암 관리의 해답을 환자 스스로 찾을 수 있도록 안내합니다",
-    link: "https://product.kyobobook.co.kr/detail/S000213728553"
+    link: "https://mkt.shopping.naver.com/link/68b855b5caef4528fc1b9dbf"
   },
   {
     slug: "32025061911332",
