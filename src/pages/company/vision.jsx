@@ -60,8 +60,10 @@ export default function Vision() {
             </div>
 
             {/* MISSION */}
-            <div className="bg-green-600/90 text-white rounded-full w-64 h-64 md:w-80 md:h-80 flex flex-col justify-center items-center shadow-2xl relative z-10 md:left-[14rem] mb-[-20px] md:mb-0">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">MISSION</h3>
+            <div className="bg-green-600/90 text-white rounded-full w-64 h-64 md:w-80 md:h-80
+            flex flex-col justify-center items-center shadow-2xl relative z-10
+            md:left-[14rem] -mt-6 md:mt-0">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">MISSION</h3>
               <div className="w-12 h-px bg-white mb-2" />
               <p className="text-center text-sm md:text-lg leading-relaxed text-white">
                 암환자 중심의 통합치료로<br />
