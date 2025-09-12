@@ -7,7 +7,7 @@ const products = {
   베지셀: {
     title: "환자를 위한 천연 야채주스, 베지셀",
     highlight: "천연 야채주스",
-    image: "/images/스크린샷 2025-09-02 162614.png",
+    image: "/images/12509120919.jpg",
     description:
       "베지셀은 신선한 야채와 과일 그대로를 담은 천연 파이토케미컬 주스입니다. 항암 중에도 부담 없이 섭취할 수 있도록 무가당, 무첨가, 저열처리 방식으로 만들었습니다. 세포 회복과 염증 완화, 면역 균형을 고려해 약사가 직접 설계한 처방형 블렌딩입니다.",
     link: "/products/vegicel",
@@ -15,7 +15,7 @@ const products = {
   자연하: {
     title: "자연을 닮은 건강한 흐름을 만듭니다",
     highlight: "건강한 흐름",
-    image: "/images/스크린샷 2025-09-02 162437.png",
+    image: "/images/22509120919.jpg",
     description:
       "자연의 원리와 흐름을 기반으로 몸의 회복을 돕는 천연물 기반 건강식품입니다. 단순한 ‘건강식품’을 넘어, 회복·예방·면역·해독 중심의 자연주의 치유 식문화를 만들어갑니다.",
     link: "/products/jayeonha",
@@ -23,7 +23,7 @@ const products = {
   서적: {
     title: "환자와 함께 만든 치유의 기록",
     highlight: "치유의 기록",
-    image: "/images/스크린샷 2025-09-02 162254.png",
+    image: "/images/32509120919.jpg",
     description:
       "환자가 스스로 암을 이해하고 치유의 주체가 되기를 바랐습니다. 병원 진료만으로는 채워지지 않는 정보와 방향을 책을 통해 전합니다. 암을 두려워하기보다, 이해하고 건강습관을 실천할 수 있도록 도와줍니다.",
     link: "/products/books",
