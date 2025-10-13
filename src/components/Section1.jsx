@@ -37,7 +37,7 @@ export default function Section1() {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden select-none">
+    <section className="relative h-[100svh] md:h-screen overflow-hidden select-none">
       {/* 이미지 슬라이드 */}
       {slides.map((slide, index) => (
         <a
@@ -91,7 +91,7 @@ export default function Section1() {
       </div>
 
       {/* 하단 인디케이터 */}
-      <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 flex items-center space-x-4 text-white z-30">
+      <div className="absolute bottom-6 md:bottom-[10%] left-1/2 transform -translate-x-1/2 flex items-center space-x-4 text-white z-30">
         <span className="opacity-70 text-sm font-medium">
           {String(current + 1).padStart(2, "0")} | {String(slides.length).padStart(2, "0")}
         </span>
