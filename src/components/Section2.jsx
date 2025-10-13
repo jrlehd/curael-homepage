@@ -35,7 +35,7 @@ const Section2 = () => {
   const current = products[active];
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden font-sans">
+    <section className="relative w-full h-[100svh] md:min-h-screen overflow-hidden font-sans">
       {/* 배경 이미지 */}
       <div
         className="absolute inset-0 bg-no-repeat bg-cover bg-center z-0"
@@ -44,7 +44,7 @@ const Section2 = () => {
       {/* 어두운 오버레이 */}
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
-      <div className="relative z-20 w-full pt-[120px] md:pt-48 pb-16 px-4 md:px-12 text-white">
+      <div className="relative z-20 w-full pt-20 md:pt-48 pb-10 px-4 md:px-12 text-white flex flex-col justify-center">
         <div className="text-center mb-6">
           <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
              OUR PRODUCT
@@ -70,7 +70,7 @@ const Section2 = () => {
 
         <div className="mx-auto w-full max-w-[1200px] bg-white text-black flex flex-col md:flex-row shadow-2xl rounded-2xl overflow-hidden">
           {/* 이미지 */}
-          <div className="w-full md:w-1/2 h-[190px] md:h-[360px] lg:h-[420px]">
+          <div className="w-full md:w-1/2 h-[160px] md:h-[360px] lg:h-[420px]">
             <img
               src={current.image}
               alt={current.title}

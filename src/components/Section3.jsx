@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Section3() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden font-sans">
+    <section className="relative w-full h-[100svh] md:min-h-screen overflow-hidden font-sans">
       {/* 배경 이미지 */}
       <div
         className="absolute inset-0 bg-no-repeat bg-cover bg-center z-0"
@@ -13,7 +13,7 @@ export default function Section3() {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       {/* 콘텐츠 */}
-      <div className="relative z-20 w-full pt-[180px] md:pt-[260px] pb-24 px-4 md:px-12 text-white">
+      <div className="relative z-20 w-full pt-24 md:pt-[260px] pb-16 px-4 md:px-12 text-white flex flex-col justify-center">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
             HEALING CONSULT

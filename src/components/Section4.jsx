@@ -21,7 +21,7 @@ export default function Section4() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden font-sans">
+    <section className="relative w-full h-[100svh] md:min-h-screen overflow-hidden font-sans">
       {/* 배경 이미지 */}
       <div className="absolute inset-0 z-0 hidden md:grid grid-cols-2">
         <div
@@ -50,7 +50,7 @@ export default function Section4() {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       {/* 콘텐츠 */}
-      <div className="relative z-20 w-full pt-[120px] md:pt-[200px] pb-[80px] md:pb-[100px] px-4 md:px-12 text-white">
+      <div className="relative z-20 w-full pt-20 md:pt-[200px] pb-12 md:pb-[100px] px-4 md:px-12 text-white flex flex-col justify-center">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
             RESEARCH AND DEVELOPMENT
