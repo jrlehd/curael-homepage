@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
 import MobileMenu from "./MobileMenu";
 import { Sling as Hamburger } from "hamburger-react";
-import { motion, AnimatePresence  } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -13,6 +13,13 @@ export default function Header() {
   const [windowWidth, setWindowWidth] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+
+  // ✅ 현재 경로가 홈(/)인지 체크
+  const [isHome, setIsHome] = useState(false);
+
+  useEffect(() => {
+    setIsHome(window.location.pathname === "/");
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -43,8 +50,18 @@ export default function Header() {
     { label: "문의 안내", submenu: ["문의안내"] },
   ];
 
+  // ✅ 홈(/) + 모바일일 때만 hovered 무시
+  const isActiveHeader =
+    isHome && isMobile
+      ? scrolled || mobileMenuOpen
+      : scrolled || hovered || mobileMenuOpen;
+
   const headerClass = `fixed top-0 left-0 w-full z-50 border-b transition-all duration-300
-    ${scrolled || hovered || mobileMenuOpen ? "bg-white text-black border-gray-200 shadow-sm" : "bg-transparent text-white border-white/30"}`;
+    ${
+      isActiveHeader
+        ? "bg-white text-black border-gray-200 shadow-sm"
+        : "bg-transparent text-white border-white/30"
+    }`;
 
   const getFontSize = () => {
     if (windowWidth > 1300) return "17px";
@@ -78,9 +95,15 @@ export default function Header() {
         <div className="shrink-0">
           <a href="/">
             <img
-              src={scrolled || hovered || mobileMenuOpen ? "/images/SymbolMark.png" : "/images/SymbolMark_dark.png"}
+              src={
+                isActiveHeader
+                  ? "/images/SymbolMark.png"
+                  : "/images/SymbolMark_dark.png"
+              }
               alt="Logo"
-              className={`transition-all duration-300 ${isMobile ? "h-6" : "h-12"}`}
+              className={`transition-all duration-300 ${
+                isMobile ? "h-6" : "h-12"
+              }`}
             />
           </a>
         </div>
@@ -88,7 +111,7 @@ export default function Header() {
         {/* 데스크탑 메뉴 */}
         {!isMobile && (
           <motion.nav
-            className={`flex flex-grow justify-center`}
+            className="flex flex-grow justify-center"
             animate={hasMounted ? { gap: hovered ? "6rem" : getGap() } : false}
             transition={{ duration: hasMounted ? 0.4 : 0 }}
           >
@@ -97,7 +120,7 @@ export default function Header() {
                 key={index}
                 label={item.label}
                 submenu={item.submenu}
-                textColor={scrolled || hovered || mobileMenuOpen ? "text-black" : "text-white"}
+                textColor={isActiveHeader ? "text-black" : "text-white"}
                 fontWeight="font-medium"
                 textSize="text-inherit"
                 customStyle={{ fontSize: getFontSize() }}
@@ -116,13 +139,15 @@ export default function Header() {
               toggled={mobileMenuOpen}
               toggle={(val) => {
                 if (!val) {
-                  setIsExiting(true); // 👈 닫을 때는 exit 플래그만 변경
+                  if (isHome && isMobile) setHovered(false); // ✅ 모바일 홈일 때 닫으면 hover 잔상 제거
+                  setIsExiting(true);
                 } else {
-                  setMobileMenuOpen(true); // 열 때는 바로 열림
+                  if (isHome && isMobile) setHovered(false); // ✅ 열 때도 초기화
+                  setMobileMenuOpen(true);
                 }
               }}
               size={36}
-              color={scrolled || hovered || mobileMenuOpen ? "#000" : "#fff"}
+              color={isActiveHeader ? "#000" : "#fff"}
               rounded
               duration={0.4}
             />
@@ -130,7 +155,7 @@ export default function Header() {
         )}
       </div>
 
-      {/* 모바일 메뉴 렌더링 (애니메이션 대응) */}
+      {/* 모바일 메뉴 렌더링 */}
       <AnimatePresence>
         {(mobileMenuOpen || isExiting) && isMobile && (
           <MobileMenu
