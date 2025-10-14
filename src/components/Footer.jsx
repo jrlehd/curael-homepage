@@ -17,7 +17,7 @@ export default function FooterCompact() {
         {/* Middle: Company Info */}
         <div className="flex-grow flex flex-col items-center md:items-start text-center md:text-left w-full md:w-auto">
           <p className="font-semibold text-gray-500">
-            (주)큐라엘 &nbsp;&nbsp; 서울특별시 노원구 동일로 1622 &nbsp;&nbsp; 대표: 김훈하
+            (주)큐라엘 &nbsp;&nbsp; 서울특별시 강남구 논현로 132길 12 &nbsp;&nbsp; 대표: 김훈하
           </p>
           <p className="text-gray-500">
             전화번호: 02-935-9843 &nbsp;&nbsp; 이메일: biz@curael.kr

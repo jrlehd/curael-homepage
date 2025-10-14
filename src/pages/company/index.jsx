@@ -129,7 +129,7 @@ const AboutPage = () => {
 
               <div className="divide-y divide-[#e5e5e5]">
                 {[
-                  { label: "소재지", value: "서울특별시 노원구 동일로 1622" },
+                  { label: "소재지", value: "서울특별시 강남구 논현로 132길 12" },
                   { label: "사업분야", value: "건강기능식품 연구개발 및 판매, 암환자 지원 솔루션 운영" },
                   { label: "주요제품", value: "내몸에 베지셀 메이킹 7.4, 베리베라진, 커큐진 등" },
                 ].map((item, idx) => (

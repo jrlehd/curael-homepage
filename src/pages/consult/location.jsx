@@ -21,7 +21,7 @@ export default function Location() {
     <div className="flex flex-col md:flex-row justify-center items-center text-sm md:text-base text-center gap-3 md:gap-12">
       <div className="flex items-center">
         <strong className="mr-2">Addr.</strong>
-        <span>서울 노원구 동일로 1622 유성상가 1층</span>
+        <span>서울특별시 강남구 논현로 132길 12 남송빌딩 2층</span>
       </div>
       <div className="flex items-center">
         <strong className="mr-2">Tel.</strong>
@@ -35,8 +35,8 @@ export default function Location() {
 
     {/* 하단 안내 문구 2개 */}
     <div className="mt-10 space-y-4 text-center font-semibold text-sm md:text-lg">
-      <p>수락산역(7호선) 3번 출구에서 도보 약 400m 직진</p>
-      <p>건물 앞 주차 가능</p>
+      <p>학동역(7호선) 8번 출구에서 도보 약 100m</p>
+      <p>건물 옆 주차장 구비</p>
     </div>
       
       {/* 지도와 텍스트 사이 구분선 */}

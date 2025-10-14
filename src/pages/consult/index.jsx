@@ -122,10 +122,10 @@ const Consult = () => {
             transition={{ duration: 0.3 }}
             className="space-y-4"
           >
-            <IconText icon={MapPin}>서울 노원구 동일로 1622 유성상가 1층 (건물 앞 주차 가능)</IconText>
+            <IconText icon={MapPin}>서울특별시 강남구 논현로 132길 12, 남송빌딩 2층 202호 (주차 가능)</IconText>
             <IconText icon={Clock}>열방상담소 운영시간: 평일(월~금) 09:00 ~ 18:00 (점심 13:00 ~ 14:00 제외)</IconText>
             <IconText icon={Clock}>열방약국 운영시간: 평일(월~금) 10:00 ~ 17:00 (점심 13:00 ~ 14:00 제외)</IconText>
-            <IconText icon={MapPin}>수락산역(7호선) 3번 출구에서 도보 약 400m 직진</IconText>
+            <IconText icon={MapPin}>학동역(7호선) 8번 출구에서 도보 약 100m</IconText>
           </motion.div>
         </AccordionItem>
 

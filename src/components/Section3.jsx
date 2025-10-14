@@ -55,15 +55,21 @@ export default function Section3() {
           <div className="flex md:hidden flex-row justify-between mt-6 px-2 gap-2 text-[11px] text-white">
             <div className="flex-1 bg-white/10 backdrop-blur-sm p-3 rounded text-center">
               <div className="text-green-200 font-semibold mb-1">💬 방식</div>
-              <div className="text-green-300 font-medium">카톡 채널 예약</div>
+              <div className="text-green-300 font-medium whitespace-nowrap">
+                카톡 채널 예약
+              </div>
             </div>
             <div className="flex-1 bg-white/10 backdrop-blur-sm p-3 rounded text-center">
               <div className="text-green-200 font-semibold mb-1">👨‍⚕️ 전문가</div>
-              <div className="text-green-300 font-medium">암 치료 전략 제공</div>
+              <div className="text-green-300 font-medium whitespace-nowrap">
+                암 치료 전략 제공
+              </div>
             </div>
             <div className="flex-1 bg-white/10 backdrop-blur-sm p-3 rounded text-center">
               <div className="text-green-200 font-semibold mb-1">📄 준비</div>
-              <div className="text-green-300 font-medium">검사자료 필요</div>
+              <div className="text-green-300 font-medium whitespace-nowrap">
+                검사 자료 준비
+              </div>
             </div>
           </div>
 

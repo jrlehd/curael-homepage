@@ -17,8 +17,8 @@ export default function NaverMap() {
       }
 
       const map = new window.naver.maps.Map("map", {
-        center: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
-        zoom: 16,
+        center: new window.naver.maps.LatLng(37.514857, 127.031461),
+        zoom: 18,
         zoomControl: true,
         zoomControlOptions: {
           position: window.naver.maps.Position.RIGHT_BOTTOM,
@@ -26,7 +26,7 @@ export default function NaverMap() {
       });
 
       new window.naver.maps.Marker({
-        position: new window.naver.maps.LatLng(37.6729939030577, 127.055968051668),
+        position: new window.naver.maps.LatLng(37.514857, 127.031461),
         map,
         title: "열방상담소",
       });
