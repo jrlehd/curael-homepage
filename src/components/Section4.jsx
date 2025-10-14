@@ -8,6 +8,7 @@ export default function Section4() {
         </>
       ),
       icon: "/images/icon1.png",
+      bg: "/images/rnd1.png",
     },
     {
       title: "식품 연구",
@@ -17,12 +18,13 @@ export default function Section4() {
         </>
       ),
       icon: "/images/icon2.png",
+      bg: "/images/rnd-banner.png",
     },
   ];
 
   return (
     <section className="relative w-full h-[100svh] md:min-h-screen overflow-hidden font-sans">
-      {/* 배경 이미지 */}
+      {/* ===== 데스크톱용 (2열 배경 + 공통 콘텐츠) ===== */}
       <div className="absolute inset-0 z-0 hidden md:grid grid-cols-2">
         <div
           className="bg-cover bg-center bg-no-repeat"
@@ -34,56 +36,85 @@ export default function Section4() {
         />
       </div>
 
-      {/* 모바일용 배경 이미지 */}
-      <div className="absolute inset-0 z-0 grid grid-rows-2 md:hidden">
-        <div
-          className="bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/rnd1.png')" }}
-        />
-        <div
-          className="bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/rnd-banner.png')" }}
-        />
-      </div>
+      {/* ===== 데스크톱용 어두운 오버레이 ===== */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10 hidden md:block" />
 
-      {/* 어두운 오버레이 */}
-      <div className="absolute inset-0 bg-black opacity-50 z-10" />
-
-      {/* 콘텐츠 */}
-      <div className="relative z-20 w-full pt-[120px] md:pt-[200px] pb-[80px] md:pb-[100px] px-4 md:px-12 text-white">
-        <div className="max-w-6xl mx-auto text-center mt-6 md:mt-0">
-          <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
+      {/* ===== 데스크톱 콘텐츠 ===== */}
+      <div className="hidden md:block relative z-20 w-full pt-[200px] pb-[100px] px-12 text-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
             RESEARCH AND DEVELOPMENT
           </p>
-          <h2 className="text-[24px] md:text-[48px] font-bold mb-12 md:mb-16">연구/개발</h2>
+          <h2 className="text-[48px] font-bold mb-16">연구/개발</h2>
 
-          {/* 선으로 구분된 영역 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-white/30 gap-10 md:gap-0">
+          <div className="grid grid-cols-2 divide-x divide-white/30">
             {researchItems.map((item, idx) => (
               <div
                 key={idx}
-                className={`px-6 text-center flex flex-col items-center
-                            justify-center md:justify-start
-                            min-h-[38vh] md:min-h-0
-                            ${idx === 0 ? 'md:items-end md:pr-16' : 'md:items-start md:pl-16'}`}
+                className={`px-6 ${
+                  idx === 0
+                    ? "items-end pr-16 text-right"
+                    : "items-start pl-16 text-left"
+                } flex flex-col justify-center min-h-[45vh]`}
               >
-                <img src={item.icon} alt="icon" className="w-9 h-9 md:w-14 md:h-14 mb-6" />
-                <h3 className="text-[20px] md:text-[30px] font-semibold mb-3">{item.title}</h3>
-                <p className="text-xs md:text-base leading-relaxed opacity-90 text-center md:text-left">{item.desc}</p>
+                <img src={item.icon} alt="icon" className="w-14 h-14 mb-6" />
+                <h3 className="text-[30px] font-semibold mb-3">{item.title}</h3>
+                <p className="text-base leading-relaxed opacity-90">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          {/* CTA 버튼 */}
           <div className="mt-12">
             <button
-              className="px-6 py-3 text-xs md:text-base border border-white text-white font-semibold rounded-full 
-                        hover:bg-white hover:text-black transition duration-300 ease-in-out"
-              onClick={() => window.location.href = "/rnd"}
+              className="px-6 py-3 text-base border border-white rounded-full font-semibold hover:bg-white hover:text-black transition"
+              onClick={() => (window.location.href = "/rnd")}
             >
               자세히 보기 →
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* ===== 모바일용 (각 섹션 분리) ===== */}
+      <div className="md:hidden text-white">
+        {/* 타이틀 블록 */}
+        <div className="relative z-20 text-center pt-24 px-4 mt-4">
+          <p
+            className="text-xs tracking-widest mb-2"
+            style={{ fontWeight: 400 }}
+          >
+            RESEARCH AND DEVELOPMENT
+          </p>
+          <h2 className="text-[24px] font-bold mb-6">연구/개발</h2>
+        </div>
+
+        {/* 각 연구 항목별 블록 */}
+        {researchItems.map((item, index) => (
+          <div key={index} className="relative h-[50svh]">
+            {/* 배경 */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${item.bg})` }}
+            />
+            <div className="absolute inset-0 bg-black/50" />
+
+            {/* 콘텐츠 */}
+            <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
+              <img src={item.icon} alt="" className="w-9 h-9 mb-4" />
+              <h3 className="text-[20px] font-semibold mb-2">{item.title}</h3>
+              <p className="text-xs leading-relaxed opacity-90">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+
+        {/* CTA */}
+        <div className="text-center py-6">
+          <button
+            className="px-6 py-3 text-xs border border-white rounded-full font-semibold hover:bg-white hover:text-black transition"
+            onClick={() => (window.location.href = "/rnd")}
+          >
+            자세히 보기 →
+          </button>
         </div>
       </div>
     </section>
