@@ -13,7 +13,7 @@ export default function Section3() {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       {/* 콘텐츠 */}
-      <div className="relative z-20 w-full pt-24 md:pt-[260px] pb-16 px-4 md:px-12 text-white flex flex-col justify-center">
+      <div className="relative z-20 w-full h-full px-4 md:px-12 text-white flex flex-col justify-center md:block pt-24 md:pt-[260px] pb-16 md:pb-24">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
             HEALING CONSULT

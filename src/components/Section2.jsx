@@ -45,7 +45,7 @@ const Section2 = () => {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       <div className="relative z-20 w-full pt-20 md:pt-48 pb-10 px-4 md:px-12 text-white flex flex-col justify-center">
-        <div className="text-center mb-6">
+        <div className="text-center mb-6 mt-10 md:mt-0">
           <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
              OUR PRODUCT
           </p>

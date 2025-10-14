@@ -50,8 +50,8 @@ export default function Section4() {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       {/* 콘텐츠 */}
-      <div className="relative z-20 w-full pt-20 md:pt-[200px] pb-12 md:pb-[100px] px-4 md:px-12 text-white flex flex-col justify-center">
-        <div className="max-w-6xl mx-auto text-center">
+      <div className="relative z-20 w-full pt-[120px] md:pt-[200px] pb-[80px] md:pb-[100px] px-4 md:px-12 text-white">
+        <div className="max-w-6xl mx-auto text-center mt-6 md:mt-0">
           <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
             RESEARCH AND DEVELOPMENT
           </p>
@@ -62,7 +62,10 @@ export default function Section4() {
             {researchItems.map((item, idx) => (
               <div
                 key={idx}
-                className={`px-6 text-center flex flex-col items-center md:text-left md:items-start ${idx === 0 ? 'md:items-end md:pr-16' : 'md:items-start md:pl-16'}`}
+                className={`px-6 text-center flex flex-col items-center
+                            justify-center md:justify-start
+                            min-h-[38vh] md:min-h-0
+                            ${idx === 0 ? 'md:items-end md:pr-16' : 'md:items-start md:pl-16'}`}
               >
                 <img src={item.icon} alt="icon" className="w-9 h-9 md:w-14 md:h-14 mb-6" />
                 <h3 className="text-[20px] md:text-[30px] font-semibold mb-3">{item.title}</h3>
