@@ -134,7 +134,7 @@ const AboutPage = () => {
                     label: "사업분야",
                     value: (
                       <>
-                        건강기능식품 연구개발 및 판매<wbr className="hidden max-[480px]:inline" /><br className="hidden max-[400px]:block" />
+                        건강기능식품 연구개발 및 판매<wbr className="hidden max-[480px]:inline" /><br className="hidden max-[430px]:block" />
                         암환자 지원 솔루션 운영
                       </>
                     ),
