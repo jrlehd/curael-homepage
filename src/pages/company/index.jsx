@@ -130,12 +130,30 @@ const AboutPage = () => {
               <div className="divide-y divide-[#e5e5e5]">
                 {[
                   { label: "소재지", value: "서울특별시 강남구 논현로 132길 12" },
-                  { label: "사업분야", value: "건강기능식품 연구개발 및 판매, 암환자 지원 솔루션 운영" },
-                  { label: "주요제품", value: "내몸에 베지셀 메이킹 7.4, 베리베라진, 커큐진 등" },
+                  {
+                    label: "사업분야",
+                    value: (
+                      <>
+                        건강기능식품 연구개발 및 판매<wbr className="hidden max-[480px]:inline" /><br className="hidden max-[400px]:block" />
+                        암환자 지원 솔루션 운영
+                      </>
+                    ),
+                  },
+                  {
+                    label: "주요제품",
+                    value: (
+                      <>
+                        내몸에 베지셀 메이킹 7.4, <wbr className="hidden max-[480px]:inline" /><br className="hidden max-[400px]:block" />
+                        베리베라진, 커큐진 등
+                      </>
+                    ),
+                  },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start py-4 sm:py-6 gap-2 pl-1">
-                    <div className="min-w-[88px] md:w-[104px] text-[#2ba447] font-bold shrink-0">{item.label}</div>
-                    <div className="flex-1">{item.value}</div>
+                    <div className="min-w-[88px] md:w-[104px] text-[#2ba447] font-bold shrink-0">
+                      {item.label}
+                    </div>
+                    <div className="flex-1 leading-relaxed">{item.value}</div>
                   </div>
                 ))}
               </div>
