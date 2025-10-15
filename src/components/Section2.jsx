@@ -35,29 +35,31 @@ const Section2 = () => {
   const current = products[active];
 
   return (
-    <section className="relative w-full h-[100svh] md:min-h-screen overflow-hidden font-sans">
-      {/* 배경 이미지 */}
+    <section className="s2 relative w-full h-[100svh] md:min-h-screen overflow-hidden font-sans">
+      {/* 배경 */}
       <div
         className="absolute inset-0 bg-no-repeat bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/images/section2_bg.png')" }}
       />
-      {/* 어두운 오버레이 */}
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
-      <div className="relative z-20 w-full pt-20 md:pt-48 pb-10 px-4 md:px-12 text-white flex flex-col justify-center">
+      {/* 콘텐츠 */}
+      <div className="s2-content relative z-20 w-full pt-20 md:pt-48 pb-10 px-4 md:px-12 text-white flex flex-col justify-center">
+        {/* 타이틀 */}
         <div className="text-center mb-6 mt-10 md:mt-0">
-          <p className="text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
-             OUR PRODUCT
+          <p className="s2-eyebrow text-xs md:text-base tracking-widest mb-2" style={{ fontWeight: 400 }}>
+            OUR PRODUCT
           </p>
-          <h2 className="text-[26px] md:text-[38px] font-bold">제품소개</h2>
+          <h2 className="s2-h2 text-[26px] md:text-[38px] font-bold">제품소개</h2>
         </div>
 
-        <div className="flex justify-center gap-4 md:gap-6 mb-10 flex-wrap">
+        {/* 탭 */}
+        <div className="s2-tabs flex justify-center gap-4 md:gap-6 mb-10 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`text-[13px] md:text-[20px] px-4 py-3 border-b-2 transition font-medium ${
+              className={`s2-tab text-[13px] md:text-[20px] px-4 py-3 border-b-2 transition font-medium ${
                 active === cat
                   ? "text-green-400 border-green-400"
                   : "text-white border-transparent hover:border-white"
@@ -68,9 +70,10 @@ const Section2 = () => {
           ))}
         </div>
 
-        <div className="mx-auto w-full max-w-[1200px] bg-white text-black flex flex-col md:flex-row shadow-2xl rounded-2xl overflow-hidden">
+        {/* 카드 */}
+        <div className="s2-card mx-auto w-full max-w-[1200px] bg-white text-black flex flex-col md:flex-row shadow-2xl rounded-2xl overflow-hidden">
           {/* 이미지 */}
-          <div className="w-full md:w-1/2 h-[160px] md:h-[360px] lg:h-[420px]">
+          <div className="s2-imgWrap w-full md:w-1/2 h-[160px] md:h-[360px] lg:h-[420px]">
             <img
               src={current.image}
               alt={current.title}
@@ -79,10 +82,10 @@ const Section2 = () => {
           </div>
 
           {/* 텍스트 */}
-          <div className="w-full md:w-1/2 py-8 px-6 md:py-10 md:px-8 lg:py-12 lg:px-10 flex flex-col items-start justify-center overflow-hidden">
+          <div className="s2-text w-full md:w-1/2 py-8 px-6 md:py-10 md:px-8 lg:py-12 lg:px-10 flex flex-col items-start justify-center overflow-hidden">
             <div className="max-w-full md:max-w-[520px] text-left mx-auto">
               <h3
-                className="text-[18px] md:text-[26px] lg:text-[30px] mb-3 md:mb-4 leading-snug"
+                className="s2-title text-[18px] md:text-[26px] lg:text-[30px] mb-3 md:mb-4 leading-snug"
                 style={{ fontWeight: 500 }}
                 dangerouslySetInnerHTML={{
                   __html: current.title.replace(
@@ -90,18 +93,18 @@ const Section2 = () => {
                     `<strong style="color:#2BAE66;font-weight:900">${current.highlight}</strong>`
                   ),
                 }}
-              ></h3>
+              />
               {current.description.split("\n\n").map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-[12px] md:text-[14px] lg:text-[15px] text-gray-700 mb-3 leading-[1.75] font-normal"
+                  className="s2-p text-[12px] md:text-[14px] lg:text-[15px] text-gray-700 mb-3 leading-[1.75] font-normal"
                 >
                   {paragraph}
                 </p>
               ))}
               <Link
                 to={current.link}
-                className="inline-block mt-1 text-[13px] md:text-[15px] text-green-800 font-semibold hover:underline"
+                className="s2-link inline-block mt-1 text-[13px] md:text-[15px] text-green-800 font-semibold hover:underline"
               >
                 더보기 →
               </Link>
@@ -109,6 +112,46 @@ const Section2 = () => {
           </div>
         </div>
       </div>
+
+      {/* 높이(세로) 작을 때만 ‘컴팩트 모드’로 줄이는 CSS */}
+      <style>{`
+        /* 세로가 700px 이하인 환경에서만 적용 */
+        @media (max-height: 700px) {
+          .s2 .s2-content { 
+            padding-top: clamp(8px, 3vh, 56px);
+            padding-bottom: clamp(8px, 2.5vh, 36px);
+          }
+          .s2 .s2-eyebrow { font-size: 11px; letter-spacing: 0.08em; }
+          .s2 .s2-h2 { font-size: 22px; }
+
+          .s2 .s2-tabs { margin-bottom: 16px; gap: 12px; }
+          .s2 .s2-tab  { padding: 8px 10px; font-size: 12px; }
+
+          /* 카드 자체 크기 축소 & 내부 스크롤 허용 (필요 시) */
+          .s2 .s2-card { 
+            max-height: calc(100dvh - 140px); 
+            overflow-y: auto; 
+            -webkit-overflow-scrolling: touch;
+          }
+
+          /* 이미지 높이 축소 */
+          .s2 .s2-imgWrap { height: clamp(110px, 22vh, 150px); }
+
+          /* 텍스트 축소 */
+          .s2 .s2-title { font-size: clamp(16px, 2.6vh, 20px); }
+          .s2 .s2-p     { font-size: clamp(11px, 1.9vh, 12px); line-height: 1.6; }
+          .s2 .s2-link  { font-size: 12px; }
+        }
+
+        /* 아주 작은 세로(≤600px)에서 한 단계 더 축소 */
+        @media (max-height: 600px) {
+          .s2 .s2-content { padding-top: clamp(6px, 2.2vh, 40px); padding-bottom: 10px; }
+          .s2 .s2-h2 { font-size: 20px; }
+          .s2 .s2-imgWrap { height: clamp(100px, 20vh, 140px); }
+          .s2 .s2-title { font-size: clamp(15px, 2.3vh, 18px); }
+          .s2 .s2-p { font-size: clamp(10px, 1.7vh, 11px); }
+        }
+      `}</style>
     </section>
   );
 };
