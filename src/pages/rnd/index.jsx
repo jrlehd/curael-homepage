@@ -66,9 +66,9 @@ const RNDPage = () => {
             />
           </div>
           <div className="w-full md:w-1/2 order-2 md:order-2">
-            <h3 className="text-xl md:text-2xl font-bold mb-2">건강기능식품 & 기능성 음료</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2">건강기능식품 개발</h3>
             <p className="text-gray-700 mb-4">
-              큐라엘은 항암 보조식품과 기능성 음료 개발을 통해 면역, 해독, 피로 개선 등 다양한 기능성 영역을 과학적으로 접근하고 있습니다.
+              큐라엘은 건강기능식품 개발을 통해 면역, 해독, 피로 개선 등 다양한 기능성 영역을 과학적으로 접근하고 있습니다.
               파이토케미컬 조합을 기반으로 실증적 효과를 추구합니다.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-gray-800">

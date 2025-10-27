@@ -36,7 +36,7 @@ export default function Location() {
     {/* 하단 안내 문구 2개 */}
     <div className="mt-10 space-y-4 text-center font-semibold text-sm md:text-lg">
       <p>학동역(7호선) 8번 출구에서 도보 약 100m</p>
-      <p>건물 옆 주차장 구비</p>
+      <p> </p>
     </div>
       
       {/* 지도와 텍스트 사이 구분선 */}

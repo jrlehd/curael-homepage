@@ -8,7 +8,7 @@ const AboutPage = () => {
   return (
     <div className="bg-white">
       <Seo 
-        title="회사소개" 
+        title="회사 소개" 
         description="큐라엘의 미션과 가치, 통합 암치료 철학을 소개합니다." 
       />
       
@@ -134,7 +134,7 @@ const AboutPage = () => {
                     label: "사업분야",
                     value: (
                       <>
-                        건강기능식품 연구개발 및 판매<wbr className="hidden max-[480px]:inline" /><br className="hidden max-[430px]:block" />
+                        건강기능식품 연구개발 및 판매, <wbr className="hidden max-[480px]:inline" /><br className="hidden max-[430px]:block" />
                         암환자 지원 솔루션 운영
                       </>
                     ),

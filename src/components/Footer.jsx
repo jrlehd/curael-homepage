@@ -24,7 +24,7 @@ export default function FooterCompact() {
             <span className="whitespace-nowrap">&nbsp;&nbsp;대표: 김훈하</span>
           </p>
           <p className="text-gray-500">
-            전화번호: 02-935-9843 &nbsp;&nbsp; 이메일: biz@curael.kr
+            전화번호: 070-7616-4840 &nbsp;&nbsp; 이메일: biz@curael.kr
           </p>
           <p className="mt-2 text-gray-500">© 2025 CURAEL. All rights reserved.</p>
         </div>
@@ -39,7 +39,7 @@ export default function FooterCompact() {
               rel="noopener noreferrer"
               className="w-52 md:w-60 bg-transparent border border-gray-300 rounded-full px-4 md:px-6 py-1.5 md:py-2 text-xs md:text-sm text-gray-500 hover:bg-gray-100 transition text-center"
             >
-              베지셀 스토어
+              베지셀 쇼핑몰
             </a>
             <a
               href="https://mkt.shopping.naver.com/link/68215855814c2c37cf00102b"
@@ -47,7 +47,7 @@ export default function FooterCompact() {
               rel="noopener noreferrer"
               className="w-52 md:w-60 bg-transparent border border-gray-300 rounded-full px-4 md:px-6 py-1.5 md:py-2 text-xs md:text-sm text-gray-500 hover:bg-gray-100 transition text-center"
             >
-              자연하 스토어
+              자연하 쇼핑몰
             </a>
           </div>
 

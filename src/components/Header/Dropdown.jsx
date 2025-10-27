@@ -14,13 +14,13 @@ const Dropdown = ({ items = [], isOpen }) => {
           <li key={index}>
             <a
               href={
-                item === "회사소개"
+                item === "회사 소개"
                   ? "/company"
                   : item === "인사말"
                   ? "/company/greeting"
                   : item === "비전"
                   ? "/company/vision"
-                  : item === "전체제품"
+                  : item === "전체 제품"
                   ? "/products"
                   : item === "베지셀"
                   ? "/products/vegicel"
@@ -28,9 +28,9 @@ const Dropdown = ({ items = [], isOpen }) => {
                   ? "/products/jayeonha"
                   : item === "서적"
                   ? "/products/books"
-                  : item === "열방상담소"
+                  : item === "열방 약국"
                   ? "/consult"
-                  : item === "위치안내"
+                  : item === "위치 안내"
                   ? "/consult/location"
                   : item === "문의안내"
                   ? "/inquiry"

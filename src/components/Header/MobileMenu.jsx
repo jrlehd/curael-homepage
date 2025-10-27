@@ -8,19 +8,19 @@ export default function MobileMenu({ navItems, onClose, isExiting, setIsExiting 
   
 
   const getLinkPath = (label, subLabel) => {
-    if (label === "회사 소개" && subLabel === "회사소개") return "/company"; // 또는 "/company/overview"
+    if (label === "회사 소개" && subLabel === "회사 소개") return "/company"; // 또는 "/company/overview"
     if (subLabel === "인사말") return "/company/greeting";
     if (subLabel === "비전") return "/company/vision";
 
-    if (subLabel === "전체제품") return "/products";
+    if (subLabel === "전체 제품") return "/products";
     if (subLabel === "베지셀") return "/products/vegicel";
     if (subLabel === "자연하") return "/products/jayeonha";
     if (subLabel === "서적") return "/products/books";
 
-    if (subLabel === "열방상담소") return "/consult";
-    if (subLabel === "위치안내") return "/consult/location";
+    if (subLabel === "열방 약국") return "/consult";
+    if (subLabel === "위치 안내") return "/consult/location";
 
-    if (subLabel === "문의안내") return "/inquiry";
+    if (subLabel === "문의 안내") return "/inquiry";
     if (subLabel === "연구/개발") return "/rnd";
 
     return "#";

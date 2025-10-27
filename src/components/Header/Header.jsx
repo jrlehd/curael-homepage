@@ -43,11 +43,11 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { label: "회사 소개", submenu: ["회사소개", "인사말", "비전"] },
-    { label: "제품 소개", submenu: ["전체제품", "베지셀", "자연하", "서적"] },
-    { label: "열방상담소", submenu: ["열방상담소", "위치안내"] },
+    { label: "회사 소개", submenu: ["회사 소개", "인사말", "비전"] },
+    { label: "제품 소개", submenu: ["전체 제품", "베지셀", "자연하", "서적"] },
+    { label: "열방 약국", submenu: ["열방 약국", "위치 안내"] },
     { label: "연구 개발", submenu: ["연구/개발"] },
-    { label: "문의 안내", submenu: ["문의안내"] },
+    { label: "문의 안내", submenu: ["문의 안내"] },
   ];
 
   // ✅ 홈(/) + 모바일일 때만 hovered 무시

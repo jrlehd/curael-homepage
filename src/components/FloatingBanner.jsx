@@ -84,7 +84,7 @@ const FloatingBanner = () => {
         rel="noopener noreferrer"
         className="flex items-center justify-center px-4 py-3 border-b border-gray-200 text-sm hover:bg-gray-100"
       >
-        베지셀 스토어
+        베지셀 쇼핑몰
       </a>
       <a
         href="https://mkt.shopping.naver.com/link/68215855814c2c37cf00102b"
@@ -92,19 +92,15 @@ const FloatingBanner = () => {
         rel="noopener noreferrer"
         className="flex items-center justify-center px-4 py-3 border-b border-gray-200 text-sm hover:bg-gray-100"
       >
-        자연하 스토어
+        자연하 쇼핑몰
       </a>
       <a
         href="https://pf.kakao.com/_Apnys"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-full h-16 flex items-center justify-center border-b border-gray-200 hover:bg-yellow-100"
+        className="flex items-center justify-center px-4 py-3 border-b border-gray-200 text-sm hover:bg-gray-100"
       >
-        <img
-          src="/images/kakao-icon.png"
-          alt="카카오톡 채널"
-          className="w-6 h-6"
-        />
+        카카오톡 채널
       </a>
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
