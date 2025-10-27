@@ -32,13 +32,13 @@ const IconText = ({ icon: Icon, children }) => (
 const Consult = () => {
   return (
     <>
-    <Seo title="열방상담소" description="암환자 맞춤 상담과 통합 솔루션 안내." />
+    <Seo title="열방 약국" description="암환자 맞춤 상담과 통합 솔루션 안내." />
 
       <SubPageBanner page="consult" />
       <SubPageNav page="consult" />
 
       <section className="text-center pt-16">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">열방상담소</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">열방 약국</h2>
         <div className="w-16 h-1 bg-green-500 mx-auto mb-12" />
       </section>
 
@@ -49,7 +49,7 @@ const Consult = () => {
           </h3>
 
           <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-            열방상담소는 <strong>약사가 직접 맞춤 전략을 제공</strong>하는 통합 암상담 프로그램입니다.
+            열방 약국는 <strong>약사가 직접 맞춤 전략을 제공</strong>하는 통합 암상담 프로그램입니다.
             환자가 제출한 <strong>혈액검사·조직검사·CT 결과</strong>를 기반으로 
             <strong>영양 전략과 보완 요법</strong>을 안내합니다.
           </p>
@@ -78,7 +78,7 @@ const Consult = () => {
             <iframe
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/BIRAMH6-RsM"
-              title="열방상담소 소개 영상"
+              title="열방 약국 소개 영상"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
