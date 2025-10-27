@@ -83,7 +83,7 @@ export const products = [
     usage: "1일 1회, 1회 1포를 바로 섭취 후 물 복용",
     expiration: "별도 표기일",
     storage: "직사광선을 피해 서늘한 곳에 보관",
-    link: "https://mkt.shopping.naver.com/link/68ae9ceed657ac14f4a39d4a"
+    link: "https://mkt.shopping.naver.com/link/68b855b5caef4528fc1b9dbf"
   },
   {
     slug: "32025061911331",
@@ -93,7 +93,7 @@ export const products = [
     author: "김훈하, 전정미",
     publisher: "큐라엘출판",
     description: "‘캔서위너’는 재발·전이암 환자에게 희망을 전하는 책으로 \n암을 극복한 김훈하 약사의 천연물·식이요법 경험이 담겨 있습니다 \n병원 치료만으로는 부족한 암 관리의 해답을 환자 스스로 찾을 수 있도록 안내합니다",
-    link: "https://mkt.shopping.naver.com/link/68b855b5caef4528fc1b9dbf"
+    link: "https://product.kyobobook.co.kr/detail/S000213728553"
   },
   {
     slug: "32025061911332",
