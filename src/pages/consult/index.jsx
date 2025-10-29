@@ -77,7 +77,7 @@ const Consult = () => {
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/BIRAMH6-RsM"
+              src="https://www.youtube.com/embed/RHHPkRvUxoc"
               title="열방 약국 소개 영상"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
