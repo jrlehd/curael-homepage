@@ -7,7 +7,7 @@ CURAEL(큐라엘)은 자연에서 해답을 찾는 통합 암 케어 브랜드�
 ---
 
 ## 🌐 Website
-https://curael.kr
+https://curael.co.kr
 
 ---
 
