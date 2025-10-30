@@ -8,7 +8,7 @@ import Seo from "../../components/Seo";
 export default function InquiryPage() {
   return (
     <>
-    <Seo title="문의안내" description="제품 및 상담 문의 방법과 연락처를 안내합니다." />
+    <Seo title="문의 안내" description="제품 및 상담 문의 방법과 연락처를 안내합니다." />
 
       <SubPageBanner page="inquiry" />
       <SubPageNav page="inquiry" />

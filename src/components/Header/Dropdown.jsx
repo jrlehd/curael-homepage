@@ -32,9 +32,9 @@ const Dropdown = ({ items = [], isOpen }) => {
                   ? "/consult"
                   : item === "위치 안내"
                   ? "/consult/location"
-                  : item === "문의안내"
+                  : item === "문의 안내"
                   ? "/inquiry"
-                  : item === "연구/개발"
+                  : item === "연구 개발"
                   ? "/rnd"
                   : "#"
               }

@@ -46,7 +46,7 @@ export default function Header() {
     { label: "회사 소개", submenu: ["회사 소개", "인사말", "비전"] },
     { label: "제품 소개", submenu: ["전체 제품", "베지셀", "자연하", "서적"] },
     { label: "열방 약국", submenu: ["열방 약국", "위치 안내"] },
-    { label: "연구 개발", submenu: ["연구/개발"] },
+    { label: "연구 개발", submenu: ["연구 개발"] },
     { label: "문의 안내", submenu: ["문의 안내"] },
   ];
 

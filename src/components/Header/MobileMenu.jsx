@@ -21,7 +21,7 @@ export default function MobileMenu({ navItems, onClose, isExiting, setIsExiting 
     if (subLabel === "위치 안내") return "/consult/location";
 
     if (subLabel === "문의 안내") return "/inquiry";
-    if (subLabel === "연구/개발") return "/rnd";
+    if (subLabel === "연구 개발") return "/rnd";
 
     return "#";
   };
